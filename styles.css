@@ -1,0 +1,633 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoCondensed-Regular';
+    src: url('fonts/RobotoCondensed-Regular.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-CondBold';
+    src: url('fonts/OpenSans-CondBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+body, html {
+   background: url('images/bg.png') repeat;
+   background-attachment: fixed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigasyon Başlangıcı */
+
+.site-nav {
+    font-family: 'RobotoCondensed-Regular', 'Helvetica Neue', Arial, sans-serif;
+    background-color: rgba(0, 55, 140, 0.1);
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    padding: 0 0px;
+}
+
+.site-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+.site-nav ul li {
+    position: relative;
+    flex: 1;
+    
+}
+
+.site-nav ul li a {
+    font-size: 17px; /* Menü başlıklarının font büyüklüğü */
+    display: block;
+    padding: 15px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 55px; /* Sabit yükseklik */
+    overflow: hidden; /* Taşan yazılar gizlenir */
+}
+
+.site-nav > ul > li > a {
+    
+    font-family: 'OpenSans-CondBold', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Ana menü başlıkları için hover efekti */
+.site-nav > ul > li > a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover efekti */
+    padding-left: 21px; /* Sol tarafa kayma efekti */
+    
+}
+
+/* Sadece Home ikonuna hover durumu uygulamak için */
+.site-nav ul li a:hover i {
+    color: #7fcffa; /* Hover olduğunda ikon rengi değişir */
+}
+
+/* Dropdown menü stili */
+.site-nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(121, 123, 132, 0.9);
+    width: 100%;
+    z-index: 998;
+    
+}
+
+/* İlk seviye menü hover ile görünmesi */
+.site-nav ul li:hover > ul {
+    display: block; /* İlk seviye alt menü görünür */
+}
+
+/* İç alt menü (Kahvaltı Tabağı için) */
+.site-nav ul li ul li ul {
+    display: none;
+    position: absolute;
+    left: 100%; /* Sağda görünmesi için */
+    top: 0; /* Üst menü ile hizalanması için */
+    background-color: rgba(119, 124, 132, 0.9);
+    width: 160px; /* İç alt menü genişliği */
+    z-index: 999;
+}
+
+/* İç alt menü hover ile görünmesi */
+.site-nav ul li ul li:hover > ul {
+    display: block; /* Sadece ilgili alt menü görünür */
+}
+
+/* Alt menüdeki elemanlar */
+.site-nav ul li ul li {
+    width: 100%;
+    padding: 1px; /* Alt menü öğelerinin padding'i */
+}
+
+/* İç alt menüdeki elemanlar */
+.site-nav ul li ul li ul li {
+    width: 100%;
+    padding: 1px; /* İç alt menü elemanlarının padding'i */
+}
+
+/* Alt ve iç alt menü elemanları hover olduğunda */
+.site-nav ul li a:hover, .site-nav ul li ul li a:hover, .site-nav ul li ul li ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Hover rengi */
+    padding-left: 21px; /* Sol tarafa kayma efekti */
+}
+/* Navigasyon Bitimi */
+
+/* İçerik Başlangıcı */
+
+/* Yiyecek İsmi Başlangıcı */
+
+.food_name {
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    top: 84px;
+    position: absolute;
+    width: 60%;
+    z-index: 99; 
+    background:linear-gradient(0.25turn, rgba(70, 70, 70, 0), rgb(255, 255, 255), rgba(105, 105, 105, 0));;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(0.25turn, rgba(70, 70, 70, 0), rgb(70, 70, 70), rgba(105, 105, 105, 0));
+    border-image-slice: 1;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  
+.food_image { 
+    top: 48px;
+    position: absolute;
+    z-index: 9; 
+    width: 0px;
+    height: 0px;
+    padding-left: -14px;
+    
+}
+.shadow {
+    top: 127px;
+    position: fixed;
+    width: 60%;
+    height: 34px;
+    z-index: 99; 
+    
+    border-image: radial-gradient(0.25turn, rgba(34, 255, 60, 0.563), rgba(254, 0, 0, 0.523), rgba(233, 225, 3, 0.397));
+    border-image-slice: 1;
+    background-image: radial-gradient(farthest-side at 50% 0%, rgba(0, 0, 0, 0.084) 0%, rgba(134, 54, 54, 0) 100%);
+} 
+/* Yiyecek İsmi Bitimi */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 147px; 
+}
+
+.card {
+    background: #fff;
+    height: 670px;
+    width: 800px;
+    margin: 1.1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-radius: 2px;
+    padding-bottom: 8px;
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.2), 0 5px 5px rgba(0,0,0,0.1);
+}
+
+.malzemeler_alt {
+   text-align: center;
+   font-size: 14px;
+   color: #a2a2a2;
+   background-color: #ffffff;
+  
+   border-radius: 2px ;
+   padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: roboto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.115);
+ 
+ }
+
+.card_header {
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 25px;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    background-image: linear-gradient(#fff, #eee);
+    border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+   
+}
+
+.table_container{
+    display: block;
+    max-height: 90%;
+    padding: 0;
+    margin: 0;
+    background: white;
+    border-radius: 0px 0px 5px 5px;
+    overflow-y: auto;
+    scroll-behavior: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    -webkit-scrollbar {display: none;}
+    
+}
+
+/* Tablo Başlangıcı */
+
+/* Tüm tablolar için ortak ayarlar */
+table {
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    width: 100%; /* Tablonun genişliğini div'e sığacak şekilde ayarlayın */
+    max-height: 100%; /* Tablonun div'den taşmasını engellemek için maksimum yüksekliği belirleyin */
+    border-collapse: collapse; /* Sütun ve satırların birleşik görünmesi için */
+    table-layout: fixed;
+    word-wrap: break-word; /* Uzun kelimeleri satır kaydır */
+    hyphens: auto;
+    white-space: normal; /* Normal metin sarma */
+    border: 1px solid #ddd;
+}
+
+td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+} 
+
+/* Malzeme tablosu ayarları */
+.malzeme-tablosu td:nth-child(1) {
+    width: calc(100% - 120px); /* İkinci sütun sabit 120px, birinci sütun geri kalan alan */
+    min-width: calc(100% - 120px);
+    max-width: calc(100% - 120px);
+    font-size: 18px;
+    font-weight: bold;
+    color: #4D4D4D;
+    background-color: #fff;
+}
+
+.malzeme-tablosu td:nth-child(2) {
+    width: 120px; /* Sabit genişlik */
+    min-width: 120px;
+    max-width: 120px;
+    font-size: 22px;
+    font-weight: normal;
+    color: #666666;
+    background-color: #fff;
+    text-align: right;
+}
+
+/* HESAP ARACI BAŞLANGICI */
+
+/* Input alanı ve "gr" yazısını hizalamak için kapsayıcı */
+.input-container {
+    display: flex;
+    align-items: center; /* input ve span'ı dikey olarak ortalar */    
+}
+
+/* Input alanı */
+input[type="number"] {
+    width: 100%; /* Genişliği hücrenin tamamına yay */
+    height: 100%; /* Yüksekliği de hücrenin tamamına yay */
+    margin: 0; /* Dış boşlukları kaldır */
+    padding-right: 5px; /* Sağ tarafa yer açmak için padding ekleyin */
+    box-sizing: border-box; /* Kenarlık ve padding dahil olmak üzere genişliği yönet */
+    border: 1px solid rgba(255, 255, 255, 0);
+    outline: none; /* Odak çizgisi yok */
+    color: #008231;
+    background-color: rgba(253, 253, 253, 0);
+    font-size: 24px; /* Girilen rakamların yazı boyutu */
+    text-align: right; /* Rakamları sağdan başlat */
+    padding-top: 19px;
+    padding-bottom: 19px;
+    -moz-appearance: textfield;/* Firefox'ta da okları kaldırmak için */
+    animation: none; /* Girilen değerin animasyonu olmaması için */
+}
+
+
+/* Yanındaki "gr" yazısı */
+#unit {
+    font-size: 21px;
+    color: #008231; /* İsteğe bağlı renk */
+    padding-right: 10px;
+}
+
+/* Placeholder (Miktar girin) yazısı için stil */
+input[type="number"]::placeholder {
+    font-size: 20px; /* Placeholder yazısının boyutu */
+    color: #008231; /* Placeholder yazısı rengi */
+    text-align: center; /* Placeholder solda kalacak */
+}
+
+/* Sayı girişi (number input) ok işaretlerini kaldır */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Input alanı focus durumundayken kenarlık rengini değiştirmek */
+input[type="number"]:focus {
+    outline: none; /* Varsayılan mavi kenarlığı kaldır */  
+}
+
+input[type="number"]:hover {
+   border: 1px solid rgb(255, 226, 0);
+   background-color: rgba(255, 255, 255, 0.48); 
+   animation: none !important; /* Girilen değerin animasyonu olmaması için */
+}
+
+/* Input alanının bulunduğu hücre için özel padding */
+.input-hucre {
+    padding: 0; /* Buradaki padding'i istediğiniz gibi ayarlayın */
+}
+/* Sadece placeholder'a animasyon uygulamak için */
+input[type="number"]:placeholder-shown {
+    animation: pulseAnimation 2s ease-in-out infinite;
+}
+
+/* Placeholder animasyonu (pulse) */
+@keyframes pulseAnimation {
+    0% {
+        opacity: 1; /* Tam görünür */
+    }
+    50% {
+        opacity: 0.2; /* Ortada hafif şeffaf */
+    }
+    100% {
+        opacity: 1; /* Tekrar tam görünür */
+    }
+}
+
+/* HESAP ARACI BİTİMİ */
+
+/* Tarif tablosu ayarları */
+.tarif-tablosu td:nth-child(1) {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4D4D4D;
+    background-color: #fff;
+}
+
+table.malzeme-tablosu tr:hover td {
+    background-color: #f1f6ef;
+}
+
+table.tarif-tablosu tr:hover td {
+    background-color: #eff5f6;
+}
+
+/* Hücre içi stil ayarları */
+.cell-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+    display: block;    
+}
+
+ .normal-text {
+    font-weight: normal;
+}
+/* Tablo Bitimi */
+/* İçerik Bitimi */
+
+/* Anasayfa Başlangıcı*/
+.anasayfa {
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  height: 100vh;          
+}
+
+.centered-image {
+  width: 1000px; 
+  height: auto;
+}
+/* Anasayfa Bitimi */
+
+/* Hazırlanıyor Başlangıcı*/
+
+.hazirlaniyor {
+    position: absolute; 
+    top: 45%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 300px;
+}
+
+.chef, .say_haz_asa {
+    position: relative; 
+    width: 100%; 
+    height: 50%; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.chef img {
+    width: 100%; 
+    height: auto; 
+}
+
+.say_haz_asa {
+    font-size: 26px;
+    color: gray;
+    text-align: center; 
+    margin: 0; 
+    padding: 0; 
+}
+/* Hazirlanıyor Bitimi */
+
+/* Responsive Ayarlar Başlangıcı */
+
+
+/* Menü Butonu */
+.menu-button {
+    display: none;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 1001;
+    font-size: 24px;
+    color: #ffffff;
+    background-color: rgba(0, 55, 140, 0.8); /* Buton arka plan rengi */
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.menu-button:hover {
+    background-color: rgb(0, 36, 91); /* Hover efekti */
+}
+
+/* Sidebar Menü */
+.sidebar {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    background-color: #004080; /* Ana menü arka plan rengi */
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    padding-top: 60px;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Sidebar İçerik */
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    margin: 0;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Alt çizgi efekti */
+}
+/* Hover Efekti */
+.sidebar nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover için hafif beyaz arka plan */
+    padding-left: 22px; /* Hover olunca sağa doğru kayma efekti */
+}
+
+/* Alt Menü (Dropdown) */
+.sidebar nav ul li ul.submenu {
+    padding-left: 15px; /* Alt menüler biraz içeride */
+    border-left: 0px solid rgba(255, 255, 255, 0.2); /* Alt menü için ince çizgi */
+}
+
+.sidebar nav ul li ul.submenu li a {
+    font-size: 16px; /* Alt menüler daha küçük */
+    padding: 10px 20px; /* İç boşluk ayarı */
+}
+
+/* Alt Menü Hover */
+.sidebar nav ul li ul.submenu li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding-left: 21px; /* Sağ kayma efekti */
+}
+
+/* Alt menüyü başlangıçta gizle */
+.submenu {
+    display: none;
+}
+
+/* Açıldığında görünür yap */
+.submenu.open {
+    display: block;
+}
+
+/* Kapatma Butonu */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #51ff00; /* Kapatma butonu hover rengi */
+}
+
+/* Sadece mobil cihazlarda göster */
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    .sidebar {
+        display: block;
+    }
+
+
+    .site-nav ul {
+        visibility: hidden; /* Menü öğelerini gizler, ancak arka planı korur */
+    }
+    
+    .site-nav {
+        background-color: rgba(211, 211, 211, 0.969); /* Navbar arka planı görünür durumda */
+        height: 53px; /* Navbar yüksekliğini ayarla */
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.234); /* Gölge efekti */
+       
+    }
+}
+
+/* Masaüstü cihazlarda navbar'ı göster */
+@media (min-width: 769px) {
+    .site-nav {
+        display: fixed; /* Navbar masaüstünde görünür */
+    }
+
+    .menu-button {
+        display: none; /* Menü butonu masaüstünde gizlenir */
+    }
+}
+
+
+
+
+    /* Mobil cihazlarda kartları alt alta diz */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Kartları dikey hizala */
+        align-items: center; /* Kartları ortala */
+    }
+
+    .card {
+        width: 90%; /* Kart genişliğini mobil için ayarla */
+        margin: 20px 0; /* Kartlar arasında dikey boşluk bırak */
+    }
+}
+
+
+
+
+
+
+
+/* Responsive Ayarlar Bitimi */
