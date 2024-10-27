@@ -481,12 +481,23 @@
 
 <!-- JavaScript Baslangici -->
 <script>
+    
         // Responsive Ayarlar
 
         function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
-    sidebar.style.transform = sidebar.style.transform === "translateX(0%)" ? "translateX(-100%)" : "translateX(0%)";
+    const body = document.body;
+
+    // Menü açıldığında `no-scroll` sınıfını ekler, kapanınca kaldırır
+    if (sidebar.style.transform === "translateX(0%)") {
+        sidebar.style.transform = "translateX(-100%)";
+        body.classList.remove("no-scroll");
+    } else {
+        sidebar.style.transform = "translateX(0%)";
+        body.classList.add("no-scroll");
+    }
 }
+
 
 function toggleSubmenu(event) {
     event.preventDefault(); // Varsayılan bağlantı davranışını engelle
