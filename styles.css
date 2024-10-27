@@ -26,8 +26,6 @@
     font-style: normal;
   }
 
-
-
 body, html {
    background: url('images/bg.png') repeat;
    background-attachment: fixed;
@@ -574,6 +572,15 @@ table.tarif-tablosu tr:hover td {
     color: #51ff00; /* Kapatma butonu hover rengi */
 }
 
+.submenu {
+    max-height: 300px; /* Gerekirse ayarlayabilirsiniz */
+    overflow-y: auto;
+}
+.no-scroll {
+    overflow: hidden; /* Sayfa kaydırmasını engeller */
+    height: 100vh;    /* Sayfanın tam yükseklikte kalmasını sağlar */
+}
+
 /* Sadece mobil cihazlarda göster */
 @media (max-width: 768px) {
     .menu-button {
@@ -621,6 +628,12 @@ table.tarif-tablosu tr:hover td {
     .card {
         width: 90%; /* Kart genişliğini mobil için ayarla */
         margin: 20px 0; /* Kartlar arasında dikey boşluk bırak */
+    }
+}
+@media (max-width: 768px) {
+    .sidebar nav ul li ul.submenu {
+        max-height: 70vh; /* Ekranın %70’i kadar yükseklik */
+        overflow-y: scroll;
     }
 }
 
