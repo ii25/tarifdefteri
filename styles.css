@@ -633,7 +633,7 @@ table.tarif-tablosu tr:hover td {
 }
 @media (max-width: 768px) {
     .sidebar nav ul li ul.submenu {
-        max-height: 70vh; /* Ekranın %70’i kadar yükseklik */
+        max-height: 38vh; /* Ekranın %70’i kadar yükseklik */
         overflow-y: scroll;
     }
 }
