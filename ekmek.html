@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarifler</title>
+    <!-- Harici stil dosyası ve ikonlar için font bağlantıları -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- MENÜ  BAŞLANGICI -->
+    <!-- Mobil Menü Başlangııcı -->
+    <!-- Menü Butonu (Hamburger Menü) -->
+    <div class="menu-button" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <!-- Sidebar Menü -->
+    <div id="sidebar" class="sidebar">
+      <div class="close-btn" onclick="toggleSidebar()">&times;</div>
+      <nav>
+        <ul>
+          <!-- UNLU MAMÜLLER VE TATLILAR -->
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">UNLU MAM. & TATLILAR</a>
+            <ul class="submenu">
+              <li><a href="ekmek.html">Ekmek</a></li>
+              <li><a href="lavas.html">Lavaş</a></li>
+              <li><a href="simit.html">Simit</a></li>
+              <li><a href="ramazan-pidesi.html">Ramazan Pidesi</a></li>
+              <li><a href="kiymali-pide.html">Kıymalı Pide</a></li>
+              <li><a href="lahmacun.html">Lahmacun</a></li>
+              <li><a href="borek.html">Börek</a></li>
+              <li><a href="pizza.html">Pizza</a></li>
+              <li>
+                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Kek</a>
+                <ul class="submenu">
+                  <li><a href="limonlu-kek.html">Limonlu Kek</a></li>
+                  <li><a href="brownie.html">Brownie</a></li>
+                </ul>
+              </li>
+              <li><a href="kurabiye.html">Kurabiye</a></li>
+              <li><a href="lokum.html">Lokum</a></li>
+              <li><a href="asure.html">Aşure</a></li>
+              <li><a href="su-muhallebisi.html">Su Muhallebisi</a></li>
+              <li><a href="dondurma.html">Dondurma</a></li>
+            </ul>
+          </li>
+          <!-- YEMEKLER -->
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">YEMEKLER</a>
+            <ul class="submenu">
+              <li><a href="tavuk-izgara.html">Tavuk Izgara</a></li>
+              <li><a href="kofte-izgara.html">Köfte Izgara</a></li>
+              <li><a href="balik-izgara.html">Balık Izgara</a></li>
+              <li><a href="adana-kebap.html">Adana Kebap</a></li>
+              <li><a href="taze-fasulye.html">Taze Fasulye</a></li>
+              <li><a href="zeytinyagli-yaprak-sarma.html">Zeytinyağlı Yaprak Sarma</a></li>
+              <li><a href="zeytinyagli-biber-dolma.html">Zeytinyağlı Biber Dolma</a></li>
+              <li><a href="mantarli-tavuk-sote.html">Mantarlı Tavuk Sote</a></li>
+              <li><a href="ciger.html">Ciğer</a></li>
+              <li><a href="sosisli.html">Sosisli</a></li>
+              <li><a href="hamburger.html">Hamburger</a></li>
+              <li><a href="kokorec.html">Kokoreç</a></li>
+              <li><a href="kumpir.html">Kumpir</a></li>
+            </ul>
+          </li>
+          <!-- KAHVALTILIKLAR -->
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">KAHVALTILIKLAR</a>
+            <ul class="submenu">
+              <li><a href="menemen.html">Menemen</a></li>
+              <li><a href="tost.html">Tost</a></li>
+              <li>
+                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Kahvaltı Tabağı</a>
+                <ul class="submenu">
+                  <li><a href="yumurta.html">Yumurta</a></li>
+                  <li><a href="beyaz-peynir.html">Beyaz Peynir</a></li>
+                  <li><a href="kasar-peyniri.html">Kaşar Peyniri</a></li>
+                  <li><a href="zeytin.html">Zeytin</a></li>
+                  <li><a href="domates.html">Domates</a></li>
+                  <li><a href="salatalik.html">Salatalık</a></li>
+                  <li><a href="nane.html">Nane</a></li>
+                  <li><a href="biber.html">Biber</a></li>
+                  <li><a href="acuka.html">Acuka</a></li>
+                  <li><a href="salam.html">Salam</a></li>
+                  <li><a href="borek.html">Börek</a></li>
+                  <li><a href="kakaolu-findik-kremasi.html">Kakaolu Fındık Kreması</a></li>
+                  <li><a href="zahter.html">Zahter</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- GARNİTÜRLER -->
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">GARNİTÜRLER</a>
+            <ul class="submenu">
+              <li>
+                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Pilav</a>
+                <ul class="submenu">
+                  <li><a href="pirinc-pilavi.html">Pirinç Pilavı</a></li>
+                  <li><a href="bulgur-pilavi.html">Bulgur Pilavı</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Salata</a>
+                <ul class="submenu">
+                  <li><a href="mevsim-salatasi.html">Mevsim Salatası</a></li>
+                  <li><a href="coban-salatasi.html">Çoban Salatası</a></li>
+                  <li><a href="patates-salatasi.html">Patates Salatası</a></li>
+                </ul>
+              </li>
+              <li><a href="cacik.html">Cacık</a></li>
+              <li>
+                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Turşu</a>
+                <ul class="submenu">
+                  <li><a href="kornison-tursusu.html">Kornişon Turşusu</a></li>
+                  <li><a href="biber-tursusu.html">Biber Turşusu</a></li>
+                  <li><a href="jalapeno-tursusu.html">Jalapeno Turşusu</a></li>
+                </ul>
+              </li>
+              <li><a href="cig-kofte.html">Çiğ Köfte</a></li>
+            </ul>
+          </li>
+          <!-- SOSLAR -->
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">SOSLAR</a>
+            <ul class="submenu">
+              <li><a href="besamel-sos.html">Beşamel Sos</a></li>
+              <li><a href="bolonez-sos.html">Bolonez Sos</a></li>
+              <li><a href="domates-sosu.html">Domates Sosu</a></li>
+              <li><a href="haydari.html">Haydari</a></li>
+              <li><a href="mayonez.html">Mayonez</a></li>
+              <li><a href="nar-eksisi.html">Nar Ekşisi</a></li>
+              <li><a href="peynir-sosu.html">Peynir Sosu</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Mobil Menü Bitimi -->
+
+    <!-- Desktop Menü Başlangıcı -->
+    <nav class="site-nav">
+      <ul>
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" /></a>
+        </div>
+        <!-- UNLU MAMÜLLER VE TATLILAR -->
+        <li>
+          <a href="#" class="menu-item-buraya">UNLU MAM. & TATLILAR</a>
+          <ul class="submenu-buraya">
+            <li><a href="ekmek.html">Ekmek</a></li>
+            <li><a href="lavas.html">Lavaş</a></li>
+            <li><a href="simit.html">Simit</a></li>
+            <li><a href="ramazan-pidesi.html">Ramazan Pidesi</a></li>
+            <li><a href="kiymali-pide.html">Kıymalı Pide</a></li>
+            <li><a href="lahmacun.html">Lahmacun</a></li>
+            <li><a href="borek.html">Börek</a></li>
+            <li><a href="pizza.html">Pizza</a></li>
+            <li>
+              <a href="#" class="menu-item-buraya">Kek</a>
+              <ul class="submenu-buraya">
+                <li><a href="limonlu-kek.html">Limonlu Kek</a></li>
+                <li><a href="brownie.html">Brownie</a></li>
+              </ul>
+            </li>
+            <li><a href="kurabiye.html">Kurabiye</a></li>
+            <li><a href="lokum.html">Lokum</a></li>
+            <li><a href="asure.html">Aşure</a></li>
+            <li><a href="su-muhallebisi.html">Su Muhallebisi</a></li>
+            <li><a href="dondurma.html">Dondurma</a></li>
+          </ul>
+        </li>
+        <!-- YEMEKLER -->
+        <li>
+          <a href="#" class="menu-item-buraya">YEMEKLER</a>
+          <ul class="submenu-buraya">
+            <li><a href="tavuk-izgara.html">Tavuk Izgara</a></li>
+            <li><a href="kofte-izgara.html">Köfte Izgara</a></li>
+            <li><a href="balik-izgara.html">Balık Izgara</a></li>
+            <li><a href="adana-kebap.html">Adana Kebap</a></li>
+            <li><a href="taze-fasulye.html">Taze Fasulye</a></li>
+            <li><a href="zeytinyagli-yaprak-sarma.html">Zeytinyağlı Yaprak Sarma</a></li>
+            <li><a href="zeytinyagli-biber-dolma.html">Zeytinyağlı Biber Dolma</a></li>
+            <li><a href="mantarli-tavuk-sote.html">Mantarlı Tavuk Sote</a></li>
+            <li><a href="ciger.html">Ciğer</a></li>
+            <li><a href="sosisli.html">Sosisli</a></li>
+            <li><a href="hamburger.html">Hamburger</a></li>
+            <li><a href="kokorec.html">Kokoreç</a></li>
+            <li><a href="kumpir.html">Kumpir</a></li>
+          </ul>
+        </li>
+        <!-- KAHVALTILIKLAR -->
+        <li>
+          <a href="#" class="menu-item-buraya">KAHVALTILIKLAR</a>
+          <ul class="submenu-buraya">
+            <li><a href="menemen.html">Menemen</a></li>
+            <li><a href="tost.html">Tost</a></li>
+            <li>
+              <a href="#" class="menu-item-buraya">Kahvaltı Tabağı</a>
+              <ul class="submenu-buraya">
+                <li><a href="yumurta.html">Yumurta</a></li>
+                <li><a href="beyaz-peynir.html">Beyaz Peynir</a></li>
+                <li><a href="kasar-peyniri.html">Kaşar Peyniri</a></li>
+                <li><a href="zeytin.html">Zeytin</a></li>
+                <li><a href="domates.html">Domates</a></li>
+                <li><a href="salatalik.html">Salatalık</a></li>
+                <li><a href="nane.html">Nane</a></li>
+                <li><a href="biber.html">Biber</a></li>
+                <li><a href="acuka.html">Acuka</a></li>
+                <li><a href="salam.html">Salam</a></li>
+                <li><a href="borek.html">Börek</a></li>
+                <li><a href="kakaolu-findik-kremasi.html">Kakaolu Fındık Kreması</a></li>
+                <li><a href="zahter.html">Zahter</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- GARNİTÜRLER -->
+        <li>
+          <a href="#" class="menu-item-buraya">GARNİTÜRLER</a>
+          <ul class="submenu-buraya">
+            <li>
+              <a href="#" class="menu-item-buraya">Pilav</a>
+              <ul class="submenu-buraya">
+                <li><a href="pirinc-pilavi.html">Pirinç Pilavı</a></li>
+                <li><a href="bulgur-pilavi.html">Bulgur Pilavı</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="menu-item-buraya">Salata</a>
+              <ul class="submenu-buraya">
+                <li><a href="mevsim-salatasi.html">Mevsim Salatası</a></li>
+                <li><a href="coban-salatasi.html">Çoban Salatası</a></li>
+                <li><a href="patates-salatasi.html">Patates Salatası</a></li>
+              </ul>
+            </li>
+            <li><a href="cacik.html">Cacık</a></li>
+            <li>
+              <a href="#" class="menu-item-buraya">Turşu</a>
+              <ul class="submenu-buraya">
+                <li><a href="kornison-tursusu.html">Kornişon Turşusu</a></li>
+                <li><a href="biber-tursusu.html">Biber Turşusu</a></li>
+                <li><a href="jalapeno-tursusu.html">Jalapeno Turşusu</a></li>
+              </ul>
+            </li>
+            <li><a href="cig-kofte.html">Çiğ Köfte</a></li>
+          </ul>
+        </li>
+        <!-- SOSLAR -->
+        <li>
+          <a href="#" class="menu-item-buraya">SOSLAR</a>
+          <ul class="submenu-buraya">
+            <li><a href="besamel-sos.html">Beşamel Sos</a></li>
+            <li><a href="bolonez-sos.html">Bolonez Sos</a></li>
+            <li><a href="domates-sosu.html">Domates Sosu</a></li>
+            <li><a href="haydari.html">Haydari</a></li>
+            <li><a href="mayonez.html">Mayonez</a></li>
+            <li><a href="nar-eksisi.html">Nar Ekşisi</a></li>
+            <li><a href="peynir-sosu.html">Peynir Sosu</a></li>
+          </ul>
+        </li>
+        <!-- Arama Çubuğu -->
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="tarif arayın..." oninput="search()" />
+          <div id="results" class="results-dropdown"></div>
+        </div>
+        <div class="whatsapp-btn">
+          <a href="https://wa.me/905451501802" class="whatsapp-btn" target="_blank"> <i class="fa-brands fa-whatsapp fa-xl"></i></a>
+        </div>
+        <div class="info-btn">
+          <a href="info.html" class="info-btn"><i class="fa-solid fa-circle-info fa-xl"></i></a>
+        </div>
+      </ul>
+    </nav>
+    <div class="shadow-site-nav"></div>
+    <!-- Desktop Menü Bitimi -->
+    <!-- MENÜ  BİTİMİ -->
+
+    <!-- İçerik Başlangıcı -->
+    <div class="container">
+      <!-- Yemek İsmi -->
+      <div class="food_name">EKMEK</div>
+
+      <!-- Malzemeler Kartı -->
+      <div class="card">
+        <div class="food_image"><img src="images/food-images/ekmek.png" alt="food image" /></div>
+        <div class="card_header">MALZEMELER</div>
+        <div class="malzemeler_alt">Tüm malzemeler kaliteli ve taze olmalı</div>
+        <div class="table_container">
+          <table class="malzeme-tablosu">
+            <tr>
+              <td>
+                <span class="cell-header">Un</span>
+                <span class="normal-text"
+                  >Ekmek yapımı için en uygun un %11-13 arası protein oranına sahip ekmeklik undur. Tarif tek un çeşidi üzerindendir. Karışım yapmak istenirse, Durum, Mısır, Çavdar, Sarı Buğday, Tam Buğday unları da ekmeklik una belli yüzdeler ile ilave edilebilir su miktarı da buna göre ayrıca
+                  hesaplanmalıdır.
+                </span>
+              </td>
+              <td class="input-hucre">
+                <div class="input-container">
+                  <input type="number" id="anaMalzeme" name="anaMalzeme" min="0" placeholder="Miktar girin" oninput="limitInputLength(this)" onkeypress="return isNumberKey(event)" autocomplete="off" />
+                  <span id="unit" style="display: none">gr</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <span class="cell-header">Su</span>
+                <div class="input-container-inline">
+                  <span class="normal-text">İçme suyu kullanın. Kullanıdğınız unun su çekme oranını belirlemek için, una genel yüzde olan %60-65 su ekleydikten sonra hamurun ne çok cıvık ne çok sıkı olmayana kadar su miktarını ayarlayıp belirlediğiniz yüzdeyi ilgili alana girin.</span>
+                  <input type="number" id="suYuzdesi" min="0" max="100" placeholder="%" value="50" oninput="calculateWaterAmount()" autocomplete="off" />
+                </div>
+              </td>
+              <td id="suMiktari" style="text-align: right"></td>
+              <!-- Hesaplanmış su miktarı burada görünecek -->
+            </tr>
+
+            <tr>
+              <td class="input-hucre">
+                <div class="input-container">
+                  <select id="mayaTipi" onchange="calculateYeastAmount()" required>
+                    <option value="0.007">İnstant Kuru Maya</option>
+                    <option value="0.009">Aktif Kuru Maya</option>
+                    <option value="0.021">Yaş Maya</option>
+                    <option value="0.035">Ekşi Maya</option>
+                  </select>
+                </div>
+                <div class="normal-text left-padding">Farklı bir maya tipi kullanacaksanız. Açılır listeden seçebilirsiniz. Mayanızı buzdolabında yada serin kuru ve güneş almayan bir ortamda saklayın</div>
+              </td>
+              <td id="mayaMiktari" style="text-align: right"></td>
+              <!-- Hesaplanmış değer burada görünecek -->
+            </tr>
+            <tr>
+              <td><span class="cell-header">Tuz</span><span class="normal-text">Fazla tuz mayanın kabarmasını engelleyebilir. Fazla tuz kullanmayın. İdeal oran %20 civarıdır. Uzun mayalamada oran %1.7-%1.8'e düşürülebilir.</span></td>
+              <td id="malzeme3Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Şeker</span><span class="normal-text">Mayalamayı hızlandırma, lezzet gibi sebeplerden şeker de isteğe göre kullanılabilir. %1-2 civarı yeterlidir</span></td>
+              <td id="malzeme4Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Yağ</span><span class="normal-text">İsteğe bağlı yağ kullanılacaksa, yağ ilavesi yoğurmanın sonlarına doğru yapılır. %1-2 civarı yeterlidir.</span></td>
+              <td id="malzeme5Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Susam Çörekotu</span><span class="normal-text">Susam ve çörektu tercihe bağlı kullanılabilir. Miktar da tercihe göre belirlenir.</span></td>
+              <td id="malzeme6Miktari"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tarif Kartı -->
+      <div class="card">
+        <div class="card_header">TARİF</div>
+        <div class="malzemeler_alt">Tarife başlamadan, ekipmanlarınızın temiz ve hazır olduğundan emin olun</div>
+        <div class="table_container">
+          <table class="tarif-tablosu">
+            <tr>
+              <td>
+                <span class="cell-header">Otoliz</span
+                ><span class="normal-text"
+                  >Mutfak şefinin haznesini ve Suyu önceden dolaba koyarak soğumasını sağlayın (sıcaklarda). Sonradan ilave edilecek su varsa (örneğin, ben 10 gr suyu tuz ilavesinde tuzu çözmek için kullanıyorum) bu miktar su düşülür. Önce suyu sonra unu hazneye koyup 1.kademede 2dk yoğurun. Üzerini
+                  örtüp bir miktar bekletin. Optimal süre 20-30 dakika.(Süre: Sıcaklarda daha kısa soğuklarda daha uzun).</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Yoğurma</span><span class="normal-text">Mayayı ilave edin ve 1.kademede 4dk yoğurun ardından tuzu, varsa ilave suyu koyup 1.kademede 3dk yoğurun.</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cell-header">Mayalama</span
+                ><span class="normal-text"
+                  >Hamuru hazneden dışarı alıp toparlayın. Geniş bir kabı hafif yağlayıp hamuru içine koyun. Kabın üzerini örtüp hamur yaklaşık iki katına çıkana kadar ortalam 60-120 dk arası kışın oda sıcaklığında yazın buzdolabında ilk mayalanmaya bırakın. Aşırı mayalamaktan kaçının.(Süre:
+                  Sıcaklarda daha kısa soğuklarda daha uzun). Not: Yaş maya yerine instant kuru maya kullanmak için de çarpım oranı 0.35 seçilmelidir. Tarifte 40 gr. yaş maya geçiyorsa, yerine 40*0.35=14 gr. İnstant maya kullanmak yeterli olacaktır.</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Birinci Katlama</span><span class="normal-text">Hamuru hafif unladığınız bir tezgaha alıp ilk katlamasını yapınız. Üstünü nemli bir bez yada strech film ile örtüp yaklaşık 30 dakika bekletin.(Süre: Sıcaklarda daha kısa soğuklarda daha uzun).</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">İkinci Katlama</span><span class="normal-text">ikinci katlamayı yapıp üstünü nemli bir bez yada strech film ile örtüp yaklaşık 30 dakika bekletin.(Süre: Sıcaklarda daha kısa soğuklarda daha uzun).</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cell-header">Beze Yapma</span
+                ><span class="normal-text"
+                  >Hamuru un serpilmiş tezgaha alıp istediğiniz miktarda parçalara bölün ( Ben 1 kg un için 6 parça yapıyorum). Böldüğünüz hamurları yuvarlayarak beze haline getirin. Üzerine nemli bez örtüp 30 dk bekletin. (Süre: Sıcaklarda daha kısa soğuklarda daha uzun).</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cell-header">Şekillendirme</span
+                ><span class="normal-text"
+                  >Bezeleri unlanmış bir yüzeye alın. Son katlama yapıp tercih ettiğiniz ekmek şeklini verin (Yuvarlak, somun, baget gibi). Şekil verdiğiniz hamuru unlanmış bir bez ya da hamur mayalama sepetine koyun. Uzun mayalama için buzdolabına koyun (4°C ile 7°C ).</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Oda Sıcaklığına Getirme</span><span class="normal-text">Sabah Buzdolabındaki Şekillendirilmiş ekmek hamurunu dışarıya alıp oda sıcaklığına gelmesini bekleyin. Süreyi çok uzun tutmayın.</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cell-header">Pişirme</span
+                ><span class="normal-text"
+                  >Fırın su bölmesine 200 gr içmelik su koyun. Fırını 250°C ayarlayarak önceden Isıtın. Fırın hazır olmaya yakın Fırın tepsisinin üzerine pişirme kağıdı koyup üzerine un serpin. Hamurları tepsiye alın. Üzerlerine çizik atıp su serpin. Üzerine susam ve çörekotunuda koyup fırına verin.
+                  Ardından fırını 220°C'ye getirip yaklaşık 25-30 dk pişirin. Tercihen pişirmenin ortalarına fırını 200°C ye düşürün ve sonlara doğru da 180C ye düşürün. İsteğe bağlı, pişme bittikten sonra ekmeğin kısa bir süre fırının içinde bekletilerek kendi ısısı ile pişmeye devam etmesi
+                  sağlanabilir. (ilk 9 dk 220 derece 18.dakikada 200 derece 27 dakidada 180 derece kapadıktan sonra 8 dk). Ekmeğin altına vurduğunuzda tok bir ses çıkıyorsa pişmiş demektir.</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Soğutma</span><span class="normal-text">Ekmeği fırından çıkardıktan sonra tel ızgaraya alıp üzerini bir bez ile örtüp soğumaya bırakın.</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Saklama</span><span class="normal-text">Özellikle yazın, ekmekler kısa sürede tüketilmeyecekse gün içinde tüketilecekler hariç diğerlerini tamamen soğuduktan sonra poşetlere koyup buzdolabına yerleştirilebilir.</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cell-header">Sonraki Kullanım için Hazırlık</span
+                ><span class="normal-text"> Tezgah, Mutfak Şefi, Fırın, Ispatulalar, Ölçü Kaşıkları, tartı gibi ekmek yapımıda kullandığınız malzeme ve ekipmanları temizleyerek bir sonraki kullanıma hazırlayınız. Dolaptaki soğuk suyunuzu tamamlayınız.</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Icerik Bitimi -->
+
+    <!--
+<div class="hazirlaniyor">
+<div class="chef"><img src="images/chef.gif" alt="chef gif'i"></div>
+<div class="say_haz_asa">Sayfa Hazırlık Aşamasında</div>
+</div>
+-->
+
+  <!--
+    <video autoplay muted loop id="anasyfaVideo">
+      <source src="images/video.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="anasayfaImage">
+      <img src="images/anasayfa.png" alt="anasayfa.png" />
+      <div class="anasayfaSloganUst">Harika Lezzetler Burada</div>
+      <div class="anasayfaSloganAlt">Menülerden dilediğiniz tarifi seçin kendi mutfağınızın şefi olun...</div>
+    </div>
+  -->
+
+    <!-- JavaScript Baslangici -->
+    <script>
+      // Responsive Ayarlar
+
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const body = document.body;
+
+        // Menü açıldığında `no-scroll` sınıfını ekler, kapanınca kaldırır
+        if (sidebar.style.transform === "translateX(0%)") {
+          sidebar.style.transform = "translateX(-100%)";
+          body.classList.remove("no-scroll");
+        } else {
+          sidebar.style.transform = "translateX(0%)";
+          body.classList.add("no-scroll");
+        }
+      }
+
+      function toggleSubmenu(event) {
+        event.preventDefault(); // Varsayılan bağlantı davranışını engelle
+
+        const submenu = event.target.nextElementSibling; // Tıklanan menüdeki alt menüyü seç
+        const parentMenu = submenu.parentElement.parentElement; // Üst seviyedeki menüyü seç
+
+        // Aynı seviyedeki diğer açık menüleri kapat
+        parentMenu.querySelectorAll(".submenu.open").forEach((menu) => {
+          if (menu !== submenu) {
+            menu.classList.remove("open");
+          }
+        });
+
+        // Tıklanan menüyü aç veya kapat
+        submenu.classList.toggle("open");
+      }
+
+      // Sayfa yüklendiğinde scroll pozisyonunu en üste getirir ve localStorage'ı temizler
+      if (history.scrollRestoration) {
+        history.scrollRestoration = "manual";
+      }
+      window.scrollTo(0, 0);
+      window.onload = function () {
+        localStorage.clear();
+        sessionStorage.clear();
+      };
+      // Sayfa yüklendiğinde input ve hücreleri temizler
+      // Bu fonksiyon sayfa her yüklendiğinde çalışır ve input alanını ve malzeme hücrelerini temizler.
+      window.onload = function () {
+        // Ana malzeme miktarı giriş alanını temizler
+        document.getElementById("anaMalzeme").value = "";
+        document.getElementById("anaMalzeme").addEventListener("input", calculateWaterAmount);
+
+        // Malzeme hücrelerini temizler (boş bırakır)
+        document.getElementById("malzeme1Miktari").innerHTML = "";
+        document.getElementById("malzeme2Miktari").innerHTML = "";
+        document.getElementById("malzeme3Miktari").innerHTML = "";
+        document.getElementById("malzeme4Miktari").innerHTML = "";
+        document.getElementById("malzeme5Miktari").innerHTML = "";
+        document.getElementById("malzeme6Miktari").innerHTML = "";
+      };
+
+      // Input alanına girilen değeri 4 hane ile sınırlar
+      // Kullanıcı 4 haneden fazla rakam girmeye çalışırsa fazlalık kısmı keser.
+      function limitInputLength(input) {
+        // Değer 4 hane ile sınırlanır
+        if (input.value.length > 4) {
+          input.value = input.value.slice(0, 4); // İlk 4 haneyi korur, fazlasını keser
+        }
+        calculateMaterials(); // Her input değişikliğinde hesaplamaları günceller
+      }
+
+      // Kullanıcı sadece rakam girebilir (0-9 arası)
+      // Bu fonksiyon, basılan tuşun sadece rakam olup olmadığını kontrol eder.
+      function isNumberKey(evt) {
+        var charCode = evt.which ? evt.which : evt.keyCode;
+        // Sadece 0-9 arasındaki rakamlara izin verilir
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+          return false; // Rakam dışı karakterler engellenir
+        }
+        return true; // Rakamlar kabul edilir
+      }
+
+      // Ana malzeme miktarına göre diğer malzeme miktarlarını hesaplar
+      // Girilen ana malzeme miktarına göre %10, %20 ve %30 oranında malzeme miktarlarını hesaplayıp hücrelere ekler.
+      function calculateMaterials() {
+        var anaMalzeme = document.getElementById("anaMalzeme").value; // Ana malzeme değerini alır
+        var unit = document.getElementById("unit"); // "gr" birimini temsil eden span elemanını alır
+
+        // Eğer bir değer girildiyse hesapla, yoksa hücreleri boş bırak
+        if (anaMalzeme && anaMalzeme > 0) {
+          unit.style.display = "inline"; // "gr" birimini göster
+
+          // Malzeme oranlarını hesapla ve tam sayıya yuvarla
+          var malzeme1 = Math.floor(anaMalzeme * 0.67);
+          var malzeme2 = Math.floor(anaMalzeme * 0.007);
+          var malzeme3 = Math.floor(anaMalzeme * 0.02);
+          // Hücrelere hesaplanan değerleri ve birimi ekle
+          document.getElementById("malzeme1Miktari").innerHTML = malzeme1 + " gr";
+          document.getElementById("malzeme2Miktari").innerHTML = malzeme2 + " gr";
+          document.getElementById("malzeme3Miktari").innerHTML = malzeme3 + " gr";
+          document.getElementById("malzeme4Miktari").innerHTML = malzeme4 + " gr";
+          document.getElementById("malzeme5Miktari").innerHTML = malzeme5 + " gr";
+          document.getElementById("malzeme6Miktari").innerHTML = malzeme6 + " gr";
+        } else {
+          unit.style.display = "none"; // Eğer ana malzeme boş veya sıfırsa, "gr" birimini gizle
+
+          // Hücreleri boş bırak
+          document.getElementById("malzeme1Miktari").innerHTML = "";
+          document.getElementById("malzeme2Miktari").innerHTML = "";
+          document.getElementById("malzeme3Miktari").innerHTML = "";
+          document.getElementById("malzeme4Miktari").innerHTML = "";
+          document.getElementById("malzeme5Miktari").innerHTML = "";
+          document.getElementById("malzeme6Miktari").innerHTML = "";
+        }
+      }
+
+      window.onload = function () {
+        document.getElementById("mayaTipi").value = "0.007"; // Varsayılan maya tipi
+
+        if (localStorage.getItem("suYuzdesi")) {
+          document.getElementById("suYuzdesi").value = localStorage.getItem("suYuzdesi");
+        }
+
+        document.getElementById("suYuzdesi").addEventListener("input", function () {
+          localStorage.setItem("suYuzdesi", document.getElementById("suYuzdesi").value);
+          calculateWaterAmount();
+        });
+
+        document.getElementById("suYuzdesi").addEventListener("blur", function () {
+          if (this.value === "") {
+          }
+        });
+
+        document.getElementById("anaMalzeme").addEventListener("input", function () {
+          calculateMaterials();
+          calculateWaterAmount();
+          calculateYeastAmount();
+        });
+
+        document.getElementById("mayaTipi").addEventListener("change", calculateYeastAmount);
+
+        calculateMaterials();
+        calculateWaterAmount();
+        calculateYeastAmount();
+      };
+
+      function calculateMaterials() {
+        var anaMalzeme = document.getElementById("anaMalzeme").value;
+        var tuzMiktari = document.getElementById("malzeme3Miktari");
+        var unit = document.getElementById("unit"); // "gr" ifadesini al
+
+        // Un miktarı girilmiş mi kontrol edin
+        if (anaMalzeme) {
+          unit.style.display = "inline"; // "gr" birimini göster
+          var hesaplananTuzMiktari = Math.round(anaMalzeme * 0.02);
+          tuzMiktari.innerHTML = hesaplananTuzMiktari + " gr"; // Hesaplanan tuz miktarını yazdır
+        } else {
+          unit.style.display = "none"; // Un girilmemişse "gr" birimini gizle
+          tuzMiktari.innerHTML = ""; // Girdi yoksa hücreyi boş bırak
+        }
+      }
+
+      function calculateWaterAmount() {
+        var anaMalzeme = document.getElementById("anaMalzeme").value;
+        var suYuzdesi = document.getElementById("suYuzdesi").value;
+        var suMiktari = document.getElementById("suMiktari");
+
+        if (anaMalzeme && suYuzdesi) {
+          var hesaplananSuMiktari = Math.round(anaMalzeme * (suYuzdesi / 100));
+          suMiktari.innerHTML = hesaplananSuMiktari + " gr";
+        } else {
+          suMiktari.innerHTML = "";
+        }
+      }
+
+      function calculateYeastAmount() {
+        var anaMalzeme = document.getElementById("anaMalzeme").value;
+        var mayaTipi = parseFloat(document.getElementById("mayaTipi").value);
+        var mayaMiktari = document.getElementById("mayaMiktari");
+
+        if (anaMalzeme && mayaTipi) {
+          var hesaplananMayaMiktari = Math.round(anaMalzeme * mayaTipi);
+          mayaMiktari.innerHTML = hesaplananMayaMiktari + " gr";
+        } else {
+          mayaMiktari.innerHTML = "";
+        }
+      }
+      // Arama Kutusu
+      const data = [
+        { title: "Ekmek", url: "ekmek.html" },
+        { title: "Lavaş", url: "lavas.html" },
+        { title: "Simit", url: "simit.html" },
+        { title: "Ramazan Pidesi", url: "ramazan-pidesi.html" },
+        { title: "Kıymalı Pide", url: "kiymali-pide.html" },
+        { title: "Lahmacun", url: "lahmacun.html" },
+        { title: "Börek", url: "borek.html" },
+        { title: "Pizza", url: "pizza.html" },
+        { title: "Limonlu Kek", url: "limonlu-kek.html" },
+        { title: "Brownie", url: "brownie.html" },
+        { title: "Kurabiye", url: "kurabiye.html" },
+        { title: "Lokum", url: "lokum.html" },
+        { title: "Aşure", url: "asure.html" },
+        { title: "Su Muhallebisi", url: "su-muhallebisi.html" },
+        { title: "Dondurma", url: "dondurma.html" },
+        { title: "Tavuk Izgara", url: "tavuk-izgara.html" },
+        { title: "Köfte Izgara", url: "kofte-izgara.html" },
+        { title: "Balık Izgara", url: "balik-izgara.html" },
+        { title: "Adana Kebap", url: "adana-kebap.html" },
+        { title: "Taze Fasulye", url: "taze-fasulye.html" },
+        { title: "Zeytinyağlı Yaprak Sarma", url: "zeytinyagli-yaprak-sarma.html" },
+        { title: "Zeytinyağlı Biber Dolma", url: "zeytinyagli-biber-dolma.html" },
+        { title: "Mantarlı Tavuk Sote", url: "mantarli-tavuk-sote.html" },
+        { title: "Ciğer", url: "ciger.html" },
+        { title: "Sosisli", url: "sosisli.html" },
+        { title: "Hamburger", url: "hamburger.html" },
+        { title: "Kokoreç", url: "kokorec.html" },
+        { title: "Kumpir", url: "kumpir.html" },
+        { title: "Menemen", url: "menemen.html" },
+        { title: "Tost", url: "tost.html" },
+        { title: "Yumurta", url: "yumurta.html" },
+        { title: "Beyaz Peynir", url: "beyaz-peynir.html" },
+        { title: "Kaşar Peyniri", url: "kasar-peyniri.html" },
+        { title: "Zeytin", url: "zeytin.html" },
+        { title: "Domates", url: "domates.html" },
+        { title: "Salatalık", url: "salatalik.html" },
+        { title: "Nane", url: "nane.html" },
+        { title: "Biber", url: "biber.html" },
+        { title: "Acuka", url: "acuka.html" },
+        { title: "Salam", url: "salam.html" },
+        { title: "Börek", url: "borek.html" },
+        { title: "Kakaolu Fındık Kreması", url: "kakaolu-findik-kremasi.html" },
+        { title: "Zahter", url: "zahter.html" },
+        { title: "Pirinç Pilavı", url: "pirinc-pilavi.html" },
+        { title: "Bulgur Pilavı", url: "bulgur-pilavi.html" },
+        { title: "Mevsim Salatası", url: "mevsim-salatasi.html" },
+        { title: "Çoban Salatası", url: "coban-salatasi.html" },
+        { title: "Patates Salatası", url: "patates-salatasi.html" },
+        { title: "Cacık", url: "cacik.html" },
+        { title: "Kornişon Turşusu", url: "kornison-tursusu.html" },
+        { title: "Biber Turşusu", url: "biber-tursusu.html" },
+        { title: "Jalapeno Turşusu", url: "jalapeno-tursusu.html" },
+        { title: "Çiğ Köfte", url: "cig-kofte.html" },
+        { title: "Beşamel Sos", url: "besamel-sos.html" },
+        { title: "Bolonez Sos", url: "bolonez-sos.html" },
+        { title: "Domates Sosu", url: "domates-sosu.html" },
+        { title: "Haydari", url: "haydari.html" },
+        { title: "Mayonez", url: "mayonez.html" },
+        { title: "Nar Ekşisi", url: "nar-eksisi.html" },
+        { title: "Peynir Sosu", url: "peynir-sosu.html" },
+      ];
+
+      function search() {
+        const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+        const resultsContainer = document.getElementById("results");
+
+        // Sonuçlar alanını temizleyin
+        resultsContainer.innerHTML = "";
+
+        // Arama terimine göre filtreleme
+        const results = data.filter((item) => item.title.toLowerCase().includes(searchTerm));
+
+        // Sonuçları göster
+        if (results.length > 0 && searchTerm !== "") {
+          resultsContainer.style.display = "block"; // Sonuçlar kutusunu göster
+          results.forEach((item) => {
+            const resultItem = document.createElement("p");
+
+            // Link oluştur
+            const link = document.createElement("a");
+            link.href = item.url;
+            link.textContent = item.title;
+            // link.target = "_blank"; // Yeni sekmede açma özelliği kaldırıldı
+
+            resultItem.appendChild(link);
+            resultsContainer.appendChild(resultItem);
+          });
+        } else {
+          resultsContainer.style.display = "none"; // Sonuçlar kutusunu gizle
+        }
+      }
+
+      // Arama kutusundan çıkıldığında sonuçları gizle
+      document.getElementById("searchInput").addEventListener("blur", function () {
+        setTimeout(() => {
+          document.getElementById("results").style.display = "none";
+        }, 200);
+      });
+
+      // Arama kutusuna yeniden odaklanıldığında, eğer sonuç varsa sonuçları göster
+      document.getElementById("searchInput").addEventListener("focus", function () {
+        const resultsContainer = document.getElementById("results");
+        if (resultsContainer.innerHTML.trim() !== "") {
+          resultsContainer.style.display = "block";
+        }
+      });
+    </script>
+    <!-- JavaScript Bitimi -->
+  </body>
+</html>
