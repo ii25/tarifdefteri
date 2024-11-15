@@ -276,6 +276,8 @@ html {
 .results-dropdown p a {
   color: #007bff;
   text-decoration: none;
+  display: block; /* Tıklanabilir alanı tüm bloğa yayar */
+  padding: 5px; /* Metin etrafında boşluk bırakır */
 }
 
 .results-dropdown p:hover {
@@ -359,23 +361,28 @@ html {
 /* Yiyecek İsmi Bitimi */
 
 .container {
+  flex-direction: column; /* Kartları dikey hizala */
+  align-items: center; /* Kartları ortala */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 147px; 
+  margin-top: 147px;
   gap: 10px;
-
+  overflow: none;
 }
 
 .card {
+  width: 90%; /* Kart genişliğini mobil için ayarla */
+  margin: 20px 0; /* Kartlar arasında dikey boşluk bırak */
   background: #fff;
-  width: 800px;
-  margin: 1.1rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  width: 90%; /* Mobil için genişlik ayarlandı */
+  margin: 20px 0; /* Mobilde dikey boşluk */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 2px;
   padding-bottom: 8px;
+  overflow: none;
 }
 
 .card:hover {
@@ -718,14 +725,16 @@ table.tarif-tablosu tr:hover td {
   z-index: 1001;
   font-size: 24px;
   color: #ffffff;
-  background-color: rgba(0, 55, 140, 0.8); /* Buton arka plan rengi */
+  background-color: rgba(0, 56, 140, 0); /* Buton arka plan rengi */
   padding: 10px 15px;
-  border-radius: 25px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 .menu-button:hover {
-  background-color: rgb(0, 36, 91); /* Hover efekti */
+  background-color:  #64212ef0; /* Ana menü arka plan rengi */
+  ; /* Hover efekti */
+  color: rgb(255, 251, 220);
 }
 
 /* Kapatma Butonu */
@@ -740,7 +749,7 @@ table.tarif-tablosu tr:hover td {
 }
 
 .close-btn:hover {
-  color: #51ff00; /* Kapatma butonu hover rengi */
+  color: #fff86e; /* Kapatma butonu hover rengi */
 }
 
 /* Sidebar Menü */
@@ -751,7 +760,7 @@ table.tarif-tablosu tr:hover td {
   top: 0;
   width: 280px;
   height: 100%;
-  background-color: #004080; /* Ana menü arka plan rengi */
+  background-color: #64212ef0; /* Ana menü arka plan rengi */
   z-index: 1000;
   transform: translateX(-100%);
   transition: transform 0.4s ease;
@@ -836,23 +845,25 @@ table.tarif-tablosu tr:hover td {
 
   .site-nav ul li {
     visibility: hidden; /* Menü öğelerini gizler, ancak arka planı korur */ 
+    
   }
   
-  .logo  {
-    
-    
-    position: fixed;
-    margin-top: 5px;
-    margin-right: 105px;
-    
+  .logo {
+    display: fixed;
+    margin: 0 auto; /* Merkezle */
+    padding: 5px; /* Daha az boşluk */
+    margin-left: 500px;
+  }
+  .logo img {
+    width: 160px; /* Daha küçük genişlik */
   }
   .search-container  {
     position: fixed;
-    margin-left: 270px;
-
-    
-    
+    margin-left: 240px; 
+    width: 180px; /* Daha küçük genişlik */ 
   }
+
+  
 
 }
 
@@ -880,30 +891,7 @@ table.tarif-tablosu tr:hover td {
 }
 
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Kartları dikey hizala */
-    align-items: center; /* Kartları ortala */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 147px;
-    gap: 10px;
-    overflow: none;
-  }
 
-  .card {
-    width: 90%; /* Kart genişliğini mobil için ayarla */
-    margin: 20px 0; /* Kartlar arasında dikey boşluk bırak */
-    background: #fff;
-    width: 90%; /* Mobil için genişlik ayarlandı */
-    margin: 20px 0; /* Mobilde dikey boşluk */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    border-radius: 2px;
-    padding-bottom: 8px;
-    overflow: none;
-  }
 
   .table_container {
     display: block;
