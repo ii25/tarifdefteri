@@ -891,7 +891,7 @@ table.tarif-tablosu tr:hover td {
   .search-container  {
     position: fixed;
     margin-left: 240px; 
-    width: 180px; /* Daha küçük genişlik */ 
+    width: 170px; /* Daha küçük genişlik */ 
   }
 
   
