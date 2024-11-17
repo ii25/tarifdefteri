@@ -361,21 +361,28 @@ html {
 /* Yiyecek İsmi Bitimi */
 
 .container {
+  flex-direction: column; /* Kartları dikey hizala */
+  align-items: center; /* Kartları ortala */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 169px;
+  margin-top: 147px;
+  gap: 10px;
+  overflow: none;
 }
 
 .card {
+  width: 90%; /* Kart genişliğini mobil için ayarla */
+  margin: 20px 0; /* Kartlar arasında dikey boşluk bırak */
   background: #fff;
-  height: 680px;
-  width: 800px;
-  margin: 1.1rem;
+  width: 90%; /* Mobil için genişlik ayarlandı */
+  margin: 20px 0; /* Mobilde dikey boşluk */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 2px;
-  padding-bottom: 44px;
+  padding-bottom: 8px;
+  overflow: none;
 }
 
 .card:hover {
@@ -905,88 +912,6 @@ table.tarif-tablosu tr:hover td {
 
 
 
-/* Responsive İçerik Başlangıcı */
-
-@media (max-width: 768px) {
-  .sidebar nav ul li ul.submenu {
-    max-height: 38vh; /* Ekranın %70’i kadar yükseklik */
-    overflow-y: scroll;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Kartları dikey hizala */
-    align-items: center; /* Kartları ortala */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 147px;
-    gap: 10px;
-    overflow: none;
-  }
-
-  .card {
-    width: 90%; /* Kart genişliğini mobil için ayarla */
-    margin: 20px 0; /* Kartlar arasında dikey boşluk bırak */
-    background: #fff;
-    width: 90%; /* Mobil için genişlik ayarlandı */
-    margin: 20px 0; /* Mobilde dikey boşluk */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    border-radius: 2px;
-    padding-bottom: 8px;
-    overflow: none;
-  }
-
-  .table_container {
-    display: block;
-    padding: 0;
-    margin: 0;
-    background: white;
-    border-radius: 0px 0px 5px 5px;
-    overflow: none;
-  }
-
-  table {
-    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-    width: 100%; /* Tablonun genişliğini div'e sığacak şekilde ayarlayın */
-    border-collapse: collapse; /* Sütun ve satırların birleşik görünmesi için */
-    table-layout: fixed;
-    word-wrap: break-word; /* Uzun kelimeleri satır kaydır */
-    hyphens: auto;
-    white-space: normal; /* Normal metin sarma */
-    border: 1px solid #ddd;
-    overflow: none;
-  }
-}
-
-/* Varsayılan yükseklik ayarları */
-.container,
-.card,
-.table_container {
-  height: 75vh; /* Tarayıcı yüksekliğinin tamamını kaplasın */
-}
-
-/* Yükseklik 600px'den az olduğunda */
-@media (max-height: 800px) {
-  .container,
-  .card,
-  .table_container {
-    height: 70vh; /* Tarayıcı yüksekliğinin %80’i */
-  }
-}
-
-/* Yükseklik 600px'den az olduğunda */
-@media (max-height: 700px) {
-  .container,
-  .card,
-  .table_container {
-    height: 65vh; /* Tarayıcı yüksekliğinin %80’i */
-  }
-}
-/* Responsive İçerik Bitimi */
 
 
 
