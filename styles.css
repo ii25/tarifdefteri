@@ -361,28 +361,21 @@ html {
 /* Yiyecek İsmi Bitimi */
 
 .container {
-  flex-direction: column; /* Kartları dikey hizala */
-  align-items: center; /* Kartları ortala */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 147px;
-  gap: 10px;
-  overflow: none;
+  margin-top: 169px;
 }
 
 .card {
-  width: 90%; /* Kart genişliğini mobil için ayarla */
-  margin: 20px 0; /* Kartlar arasında dikey boşluk bırak */
   background: #fff;
-  width: 90%; /* Mobil için genişlik ayarlandı */
-  margin: 20px 0; /* Mobilde dikey boşluk */
+  height: 680px;
+  width: 800px;
+  margin: 1.1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 2px;
-  padding-bottom: 8px;
-  overflow: none;
+  padding-bottom: 44px;
 }
 
 .card:hover {
@@ -626,39 +619,72 @@ table.tarif-tablosu tr:hover td {
 /* İçerik Bitimi */
 
 /* Anasayfa Başlangıcı */
-#anasyfaVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
+/* Video arka plan */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
 
-.anasayfaImage {
-  position: fixed;
-  bottom: 0;
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* İçerik konteyneri */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  color: #f1f1f1;
-  padding: 20px;
-  width: 100%; 
-  height: 75%; 
-  opacity: 0; /* İlk başta gizli */
-  animation: fadeIn 1s ease-out forwards; /* 1 saniyede, ease-out hızla sona ulaşır */
-  animation-delay: 0.5s; /* Gecikme süresi, istenirse */
+  z-index: 1;
+  color: white;
+  position: fixed;
+  height: 90%;
+  width: 100%;
+  animation: fadeIn 1s ease-out forwards;
 }
-.anasayfaSloganUst {
-  
-  font-size: 50px;
+
+/* Ana resim */
+.main-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Slogan metni */
+.slogan-text {
+  font-size: 3rem;
   font-weight: bold;
-  padding-top: 30px;
-  margin-left: 32px;
+  margin-bottom: 10px;
 }
-.anasayfaSloganAlt {
-  
-  font-size: 23px;
-  padding-top: 20px;
-  margin-left: 32px;
-  color: #fff1e1;
+
+/* Alt slogan metni */
+.slogan-subtext {
+  font-size: 1.2rem;
+  color: #fff0d5f0;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .main-image {
+    width: 100px;
+}
+
+  .slogan-text {
+      font-size: 2rem;
+  }
+
+
+  .slogan-subtext {
+      font-size: 0.8rem;
+  }
 }
 /* Anasayfa Bitimi */
 
@@ -725,16 +751,14 @@ table.tarif-tablosu tr:hover td {
   z-index: 1001;
   font-size: 24px;
   color: #ffffff;
-  background-color: rgba(0, 56, 140, 0); /* Buton arka plan rengi */
+  background-color: #64212e00; /* Buton arka plan rengi */
   padding: 10px 15px;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 .menu-button:hover {
-  background-color:  #64212ef0; /* Ana menü arka plan rengi */
-  ; /* Hover efekti */
-  color: rgb(255, 251, 220);
+  
 }
 
 /* Kapatma Butonu */
@@ -855,7 +879,7 @@ table.tarif-tablosu tr:hover td {
     margin-left: 500px;
   }
   .logo img {
-    width: 160px; /* Daha küçük genişlik */
+    width: 150px; /* Daha küçük genişlik */
   }
   .search-container  {
     position: fixed;
@@ -891,7 +915,30 @@ table.tarif-tablosu tr:hover td {
 }
 
 @media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Kartları dikey hizala */
+    align-items: center; /* Kartları ortala */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 147px;
+    gap: 10px;
+    overflow: none;
+  }
 
+  .card {
+    width: 90%; /* Kart genişliğini mobil için ayarla */
+    margin: 20px 0; /* Kartlar arasında dikey boşluk bırak */
+    background: #fff;
+    width: 90%; /* Mobil için genişlik ayarlandı */
+    margin: 20px 0; /* Mobilde dikey boşluk */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 2px;
+    padding-bottom: 8px;
+    overflow: none;
+  }
 
   .table_container {
     display: block;
@@ -915,7 +962,30 @@ table.tarif-tablosu tr:hover td {
   }
 }
 
+/* Varsayılan yükseklik ayarları */
+.container,
+.card,
+.table_container {
+  height: 75vh; /* Tarayıcı yüksekliğinin tamamını kaplasın */
+}
 
+/* Yükseklik 600px'den az olduğunda */
+@media (max-height: 800px) {
+  .container,
+  .card,
+  .table_container {
+    height: 70vh; /* Tarayıcı yüksekliğinin %80’i */
+  }
+}
+
+/* Yükseklik 600px'den az olduğunda */
+@media (max-height: 700px) {
+  .container,
+  .card,
+  .table_container {
+    height: 65vh; /* Tarayıcı yüksekliğinin %80’i */
+  }
+}
 /* Responsive İçerik Bitimi */
 
 
