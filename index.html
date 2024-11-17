@@ -279,19 +279,17 @@
     <!-- Desktop Menü Bitimi -->
     <!-- MENÜ  BİTİMİ -->
 
-    <!-- İçerik Başlangıcı -->
-
-    <video autoplay muted loop id="anasyfaVideo">
-      <source src="images/video.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
-    <div class="anasayfaImage">
-      <img src="images/anasayfa.png" alt="anasayfa.png" />
-      <div class="anasayfaSloganUst">Harika Lezzetler Burada</div>
-      <div class="anasayfaSloganAlt">Menülerden dilediğiniz tarifi seçin kendi mutfağınızın şefi olun...</div>
+    <div class="video-container">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="images/video.mp4" type="video/mp4">
+            Tarayıcınız video oynatmayı desteklemiyor.
+        </video>
     </div>
-    <!-- Icerik Bitimi -->
-
+    <div class="content-container">
+        <img src="images/anasayfa.png" alt="Anasayfa Resmi" class="main-image">
+        <h1 class="slogan-text">Harika Tarifler Burada</h1>
+        <p class="slogan-subtext">Dilediğiniz Tafifi Seçin Kendi Mutfağınızın Şefi Olun...</p>
+    </div>
     <!--
 <div class="hazirlaniyor">
 <div class="chef"><img src="images/chef.gif" alt="chef gif'i"></div>
