@@ -883,7 +883,7 @@ table.tarif-tablosu tr:hover td {
     display: fixed;
     margin: 0 auto; /* Merkezle */
     padding: 5px; /* Daha az boşluk */
-    margin-left: 550px;
+    margin-left: 545px;
   }
   .logo img {
     width: 150px; /* Daha küçük genişlik */
@@ -891,7 +891,7 @@ table.tarif-tablosu tr:hover td {
   .search-container  {
     position: fixed;
     margin-left: 240px; 
-    width: 160px; /* Daha küçük genişlik */ 
+    width: 150px; /* Daha küçük genişlik */ 
   }
 
   
