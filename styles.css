@@ -217,7 +217,7 @@ html {
 .logo {
   justify-content: center;
   align-content: center;
-  padding-right: 40px;
+  padding-right: 50px;
   margin-left: 50px;
   color: #ffffff;
   float: left;
@@ -361,28 +361,21 @@ html {
 /* Yiyecek İsmi Bitimi */
 
 .container {
-  flex-direction: column; /* Kartları dikey hizala */
-  align-items: center; /* Kartları ortala */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 147px;
-  gap: 10px;
-  overflow: none;
+  margin-top: 169px;
 }
 
 .card {
-  width: 90%; /* Kart genişliğini mobil için ayarla */
-  margin: 20px 0; /* Kartlar arasında dikey boşluk bırak */
   background: #fff;
-  width: 90%; /* Mobil için genişlik ayarlandı */
-  margin: 20px 0; /* Mobilde dikey boşluk */
+  height: 680px;
+  width: 800px;
+  margin: 1.1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 2px;
-  padding-bottom: 8px;
-  overflow: none;
+  padding-bottom: 44px;
 }
 
 .card:hover {
@@ -461,9 +454,7 @@ td {
 }
 
 .malzeme-tablosu td:nth-child(2) {
-  width: 120px; /* Sabit genişlik */
-  min-width: 120px;
-  max-width: 120px;
+  width: 96px; /* Sabit genişlik */
   font-size: 22px;
   font-weight: normal;
   color: #666666;
@@ -507,7 +498,7 @@ input[type="number"] {
 
 /* Placeholder (Miktar girin) yazısı için stil */
 input[type="number"]::placeholder {
-  font-size: 19px; /* Placeholder yazısının boyutu */
+  font-size: 18px; /* Placeholder yazısının boyutu */
   color: #349e5d; /* Placeholder yazısı rengi */
   text-align: center; /* Placeholder solda kalacak */
 }
@@ -575,8 +566,8 @@ input[type="number"]:placeholder-shown {
 }
 
 .input-container-inline input[type="number"] {
-  width: 60px; /* Genişliği ayarla */
-  padding: 5px; /* İç boşluk */
+  width: 40px; /* Genişliği ayarla */
+  padding: 0px; /* İç boşluk */
   font-size: 14px; /* Yazı boyutu */
 }
 
@@ -586,7 +577,10 @@ input[type="number"]:placeholder-shown {
   background-color: #fafafa; /* Açık mavi arka plan */
   border: 1px solid #d4d4d4; /* Turkuaz kenarlık */
   color: #afb7ac;
-  padding: 10px; /* İç boşluk */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 8px;
   font-size: 18px; /* Yazı boyutu */
   margin-bottom: 20px;
 }
@@ -883,7 +877,7 @@ table.tarif-tablosu tr:hover td {
     display: fixed;
     margin: 0 auto; /* Merkezle */
     padding: 5px; /* Daha az boşluk */
-    margin-left: 545px;
+    margin-left: 500px;
   }
   .logo img {
     width: 150px; /* Daha küçük genişlik */
@@ -891,7 +885,7 @@ table.tarif-tablosu tr:hover td {
   .search-container  {
     position: fixed;
     margin-left: 240px; 
-    width: 150px; /* Daha küçük genişlik */ 
+    width: 180px; /* Daha küçük genişlik */ 
   }
 
   
@@ -912,6 +906,68 @@ table.tarif-tablosu tr:hover td {
 
 
 
+/* Responsive İçerik Başlangıcı */
+
+@media (max-width: 768px) {
+  .sidebar nav ul li ul.submenu {
+    max-height: 38vh; /* Ekranın %70’i kadar yükseklik */
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Kartları dikey hizala */
+    align-items: center; /* Kartları ortala */
+    display: flex;
+    justify-content: center;
+    margin-top: 160px; 
+    padding-bottom: 10px;
+  }
+
+  .card {
+    width: 93%; /* Kart genişliğini mobil için ayarla */
+    margin: 10px 0; /* Mobilde dikey boşluk */
+    padding-bottom: 8px;
+   
+  }
+}
+
+/* Varsayılan yükseklik ayarları */
+.container,
+.card,
+.table_container {
+  height: 75vh; /* Tarayıcı yüksekliğinin tamamını kaplasın */
+}
+
+/* Yükseklik 800px'den az ve genişlik 768px'den büyük olduğunda */
+@media (max-height: 800px) and (min-width: 769px) {
+  .container,
+  .card,
+  .table_container {
+    height: 70vh; /* Tarayıcı yüksekliğinin %70’i */
+  }
+}
+
+/* Yükseklik 700px'den az ve genişlik 768px'den büyük olduğunda */
+@media (max-height: 700px) and (min-width: 769px) {
+  .container,
+  .card,
+  .table_container {
+    height: 65vh; /* Tarayıcı yüksekliğinin %65’i */
+  }
+}
+/* Mobil cihazlarda bu sorguları etkisiz hale getirin */
+@media (max-width: 768px) {
+  .container,
+  .card,
+  .table_container {
+    height: auto; /* Varsayılan yüksekliği uygula */
+  }
+}
+
+
+/* Responsive İçerik Bitimi */
 
 
 
