@@ -295,9 +295,7 @@
               <td>
                 <span class="cell-header">Un</span>
                 <span class="normal-text"
-                  >Ekmek yapımı için en uygun un %11-13 arası protein oranına sahip ekmeklik undur. Tarif tek un çeşidi üzerindendir. Karışım yapmak istenirse, Durum, Mısır, Çavdar, Sarı Buğday, Tam Buğday unları da ekmeklik una belli yüzdeler ile ilave edilebilir su miktarı da buna göre ayrıca
-                  hesaplanmalıdır.
-                </span>
+                  >Ekmek yapımı için en uygun un %11-13 arası protein oranına sahip ekmeklik undur. Alternatif olarak genel amaçlı unlarla da ekmek yapabilirsiniz. Ayrıca farklı un tiplerini bir arada kullanabilirsiniz. (Örneğin: Durum, Mısır, Çavdar, Sarı Buğday, Tam Buğday) ancak bunun için ölçü ve orann aracı henüz tarife eklenmemiştir.
               </td>
               <td class="input-hucre">
                 <div class="input-container">
@@ -311,8 +309,8 @@
               <td>
                 <span class="cell-header">Su</span>
                 <div class="input-container-inline">
-                  <span class="normal-text">İçme suyu kullanın. Kullanıdğınız unun su çekme oranını belirlemek için, una genel yüzde olan %60-65 su ekleydikten sonra hamurun ne çok cıvık ne çok sıkı olmayana kadar su miktarını ayarlayıp belirlediğiniz yüzdeyi ilgili alana girin.</span>
-                  <input type="number" id="suYuzdesi" min="0" max="100" placeholder="%" value="50" oninput="calculateWaterAmount()" autocomplete="off" />
+                  <span class="normal-text">İçme suyu kullanınız. Unların su çekme oranları farklıdır. Öncelikle kullanacağıız una göre ne kadar su kullanabileceğinizi belirlemeniz gerekiyor. %60-65 gibi genel bir oran ile başlayın. Hamurunuz ne çok cıvık ne çok sıkı olamalı, yoğruldukça toparlanmalı elasik bir yapıya kavuşmalı. Su miktarı ile oynayarak bunu sağlayın. En ideal oranı birkaç deneme sonrasında bulabilir ve ununuzun su çekme oranını belirleyebilirsiniz. Örneğin, 1000 gr un için 670 gr su  kullanarak hamurunuzu ideal kıvama getirdi iseniz ununuzda kullanacağınız su yüzdeniz "67" dir. Ununuz için belirlediğniz su yüzdesini "%" alanına giriniz.</span>
+                  <input type="number" id="suYuzdesi" min="0" max="99" placeholder="%" value="50" oninput="limitInputLength(this)" autocomplete="off" />  
                 </div>
               </td>
               <td id="suMiktari" style="text-align: right"></td>
@@ -335,19 +333,19 @@
               <!-- Hesaplanmış değer burada görünecek -->
             </tr>
             <tr>
-              <td><span class="cell-header">Tuz</span><span class="normal-text">Fazla tuz mayanın kabarmasını engelleyebilir. Fazla tuz kullanmayın. İdeal oran %20 civarıdır. Uzun mayalamada oran %1.7-%1.8'e düşürülebilir.</span></td>
+              <td><span class="cell-header">Tuz</span><span class="normal-text">Uzun mayalama yapacaksanız (buzdoabında geceden bekletme) oran %1.7-%1.8'e düşürülebilir.</span></td>
               <td id="malzeme3Miktari"></td>
             </tr>
             <tr>
-              <td><span class="cell-header">Şeker</span><span class="normal-text">Mayalamayı hızlandırma, lezzet gibi sebeplerden şeker de isteğe göre kullanılabilir. %1-2 civarı yeterlidir</span></td>
+              <td><span class="cell-header">Şeker</span><span class="normal-text">Ekmek yapımında şeker mecburi değildir. Şeker, mayalanma sürecini hızlandırma, kabuğun daha kahverengi olması ve tat verici özellikler sağlar. Şekerin bu özelliklerini kullanmak istiyorsanız, şeker de ilave edebilirsiniz. %1-2 civarı yeterlidir</span></td>
               <td id="malzeme4Miktari"></td>
             </tr>
             <tr>
-              <td><span class="cell-header">Yağ</span><span class="normal-text">İsteğe bağlı yağ kullanılacaksa, yağ ilavesi yoğurmanın sonlarına doğru yapılır. %1-2 civarı yeterlidir.</span></td>
+              <td><span class="cell-header">Yağ</span><span class="normal-text">Yağı, katlama esnasında hamurun kaba yapışmasını engellemek için çok az bir miktar kullanacağız. Bunun haricindeki yağ kullanımı mecburi değildir. Ancak daha pidemsi dokuda bir ekmek yapmak istiyorsanız  %1-2 civarı yağ ilave edebilirsiniz.</span></td>
               <td id="malzeme5Miktari"></td>
             </tr>
             <tr>
-              <td><span class="cell-header">Susam Çörekotu</span><span class="normal-text">Susam ve çörektu tercihe bağlı kullanılabilir. Miktar da tercihe göre belirlenir.</span></td>
+              <td><span class="cell-header">Susam, Çörekotu</span><span class="normal-text">Kişisel tercihe bağlıdır. Miktarı da zevkinize göre ayarlayabilirsiniz.</span></td>
               <td id="malzeme6Miktari"></td>
             </tr>
           </table>
@@ -360,6 +358,13 @@
         <div class="malzemeler_alt">Tarife başlamadan, ekipmanlarınızın temiz ve hazır olduğundan emin olun</div>
         <div class="table_container">
           <table class="tarif-tablosu">
+            <tr>
+              <td>
+                <span class="cell-header">Önsöz</span
+                ><span class="normal-text">...</span
+                >
+              </td>
+            </tr>
             <tr>
               <td>
                 <span class="cell-header">Otoliz</span
@@ -442,14 +447,16 @@
 -->
 
   <!--
-    <video autoplay muted loop id="anasyfaVideo">
-      <source src="images/video.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
-    <div class="anasayfaImage">
-      <img src="images/anasayfa.png" alt="anasayfa.png" />
-      <div class="anasayfaSloganUst">Harika Lezzetler Burada</div>
-      <div class="anasayfaSloganAlt">Menülerden dilediğiniz tarifi seçin kendi mutfağınızın şefi olun...</div>
+    <div class="video-container">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="images/video.mp4" type="video/mp4">
+            Tarayıcınız video oynatmayı desteklemiyor.
+        </video>
+    </div>
+    <div class="content-container">
+        <img src="images/anasayfa.png" alt="Anasayfa Resmi" class="main-image">
+        <h1 class="slogan-text">Harika Tarifler Burada</h1>
+        <p class="slogan-subtext">Dilediğiniz Tafifi Seçin Kendi Mutfağınızın Şefi Olun...</p>
     </div>
   -->
 
@@ -515,13 +522,29 @@
 
       // Input alanına girilen değeri 4 hane ile sınırlar
       // Kullanıcı 4 haneden fazla rakam girmeye çalışırsa fazlalık kısmı keser.
-      function limitInputLength(input) {
-        // Değer 4 hane ile sınırlanır
-        if (input.value.length > 4) {
-          input.value = input.value.slice(0, 4); // İlk 4 haneyi korur, fazlasını keser
-        }
-        calculateMaterials(); // Her input değişikliğinde hesaplamaları günceller
-      }
+   // Belirli bir input alanına ve maksimum uzunluğa göre sınır koyan fonksiyon
+function limitInputLength(input, maxLength) {
+  if (input.value.length > maxLength) {
+    input.value = input.value.slice(0, maxLength);
+  }
+}
+
+// Ana malzeme miktarı için sınır
+document.getElementById("anaMalzeme").addEventListener("input", function () {
+  limitInputLength(this, 4); // 4 haneli sınır
+  calculateMaterials();
+  calculateWaterAmount();
+  calculateYeastAmount();
+});
+
+// Su yüzdesi için sınır
+document.getElementById("suYuzdesi").addEventListener("input", function () {
+  limitInputLength(this, 2); // 2 haneli sınır
+  if (parseInt(this.value, 10) > 99) {
+    this.value = "99"; // 99'dan büyük değerleri engelle
+  }
+  calculateWaterAmount();
+});
 
       // Kullanıcı sadece rakam girebilir (0-9 arası)
       // Bu fonksiyon, basılan tuşun sadece rakam olup olmadığını kontrol eder.
