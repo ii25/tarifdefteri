@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tarifler</title>
+    <title>Tarif Defteri</title>
     <!-- Harici stil dosyası ve ikonlar için font bağlantıları -->
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -11,292 +11,307 @@
   </head>
   <body>
     <!-- MENÜ  BAŞLANGICI -->
-    <!-- Mobil Menü Başlangııcı -->
-    <!-- Menü Butonu (Hamburger Menü) -->
-    <div class="menu-button" onclick="toggleSidebar()">
-      <i class="fas fa-bars"></i>
-    </div>
-    <!-- Sidebar Menü -->
-    <div id="sidebar" class="sidebar">
-      <div class="close-btn" onclick="toggleSidebar()">&times;</div>
-      <nav>
-        <ul>
-          <!-- UNLU MAMÜLLER VE TATLILAR -->
+<!-- Mobil Menü Başlangııcı -->
+<!-- Menü Butonu (Hamburger Menü) -->
+<div class="menu-button" onclick="toggleSidebar()">
+  <i class="fas fa-bars"></i>
+</div>
+<!-- Sidebar Menü -->
+<div id="sidebar" class="sidebar">
+  <div class="close-btn" onclick="toggleSidebar()">&times;</div>
+  <nav>
+    <ul>
+      <!-- UNLU MAMÜLLER VE TATLILAR -->
+      <li>
+        <a href="#" class="menu-item" onclick="toggleSubmenu(event)">UNLU MAM. & TATLILAR</a>
+        <ul class="submenu">
+          <li><a href="pages/ekmek.html">Ekmek</a></li>
+          <li><a href="pages/lavas.html">Lavaş</a></li>
+          <li><a href="pages/simit.html">Simit</a></li>
+          <li><a href="pages/ramazan-pidesi.html">Ramazan Pidesi</a></li>
+          <li><a href="pages/kiymali-pide.html">Kıymalı Pide</a></li>
+          <li><a href="pages/lahmacun.html">Lahmacun</a></li>
+          <li><a href="pages/borek.html">Börek</a></li>
+          <li><a href="pages/pizza.html">Pizza</a></li>
           <li>
-            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">UNLU MAM. & TATLILAR</a>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Kek</a>
             <ul class="submenu">
-              <li><a href="ekmek.html">Ekmek</a></li>
-              <li><a href="lavas.html">Lavaş</a></li>
-              <li><a href="simit.html">Simit</a></li>
-              <li><a href="ramazan-pidesi.html">Ramazan Pidesi</a></li>
-              <li><a href="kiymali-pide.html">Kıymalı Pide</a></li>
-              <li><a href="lahmacun.html">Lahmacun</a></li>
-              <li><a href="borek.html">Börek</a></li>
-              <li><a href="pizza.html">Pizza</a></li>
-              <li>
-                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Kek</a>
-                <ul class="submenu">
-                  <li><a href="limonlu-kek.html">Limonlu Kek</a></li>
-                  <li><a href="brownie.html">Brownie</a></li>
-                </ul>
-              </li>
-              <li><a href="kurabiye.html">Kurabiye</a></li>
-              <li><a href="lokum.html">Lokum</a></li>
-              <li><a href="asure.html">Aşure</a></li>
-              <li><a href="su-muhallebisi.html">Su Muhallebisi</a></li>
-              <li><a href="dondurma.html">Dondurma</a></li>
+              <li><a href="pages/limonlu-kek.html">Limonlu Kek</a></li>
+              <li><a href="pages/brownie.html">Brownie</a></li>
             </ul>
           </li>
-          <!-- YEMEKLER -->
+          <li><a href="pages/kurabiye.html">Kurabiye</a></li>
+          <li><a href="pages/lokum.html">Lokum</a></li>
+          <li><a href="pages/asure.html">Aşure</a></li>
+          <li><a href="pages/su-muhallebisi.html">Su Muhallebisi</a></li>
+          <li><a href="pages/dondurma.html">Dondurma</a></li>
+        </ul>
+      </li>
+      <!-- YEMEKLER -->
+      <li>
+        <a href="#" class="menu-item" onclick="toggleSubmenu(event)">YEMEKLER</a>
+        <ul class="submenu">
+          <li><a href="pages/tavuk-izgara.html">Tavuk Izgara</a></li>
+          <li><a href="pages/kofte-izgara.html">Köfte Izgara</a></li>
+          <li><a href="pages/balik-izgara.html">Balık Izgara</a></li>
+          <li><a href="pages/adana-kebap.html">Adana Kebap</a></li>
+          <li><a href="pages/taze-fasulye.html">Taze Fasulye</a></li>
+          <li><a href="pages/zeytinyagli-yaprak-sarma.html">Zeytinyağlı Yaprak Sarma</a></li>
+          <li><a href="pages/zeytinyagli-biber-dolma.html">Zeytinyağlı Biber Dolma</a></li>
+          <li><a href="pages/mantarli-tavuk-sote.html">Mantarlı Tavuk Sote</a></li>
+          <li><a href="pages/ciger.html">Ciğer</a></li>
+          <li><a href="pages/sosisli.html">Sosisli</a></li>
+          <li><a href="pages/hamburger.html">Hamburger</a></li>
+          <li><a href="pages/kokorec.html">Kokoreç</a></li>
+          <li><a href="pages/kumpir.html">Kumpir</a></li>
+        </ul>
+      </li>
+      <!-- KAHVALTILIKLAR -->
+      <li>
+        <a href="#" class="menu-item" onclick="toggleSubmenu(event)">KAHVALTILIKLAR</a>
+        <ul class="submenu">
+          <li><a href="pages/menemen.html">Menemen</a></li>
+          <li><a href="pages/tost.html">Tost</a></li>
           <li>
-            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">YEMEKLER</a>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Kahvaltı Tabağı</a>
             <ul class="submenu">
-              <li><a href="tavuk-izgara.html">Tavuk Izgara</a></li>
-              <li><a href="kofte-izgara.html">Köfte Izgara</a></li>
-              <li><a href="balik-izgara.html">Balık Izgara</a></li>
-              <li><a href="adana-kebap.html">Adana Kebap</a></li>
-              <li><a href="taze-fasulye.html">Taze Fasulye</a></li>
-              <li><a href="zeytinyagli-yaprak-sarma.html">Zeytinyağlı Yaprak Sarma</a></li>
-              <li><a href="zeytinyagli-biber-dolma.html">Zeytinyağlı Biber Dolma</a></li>
-              <li><a href="mantarli-tavuk-sote.html">Mantarlı Tavuk Sote</a></li>
-              <li><a href="ciger.html">Ciğer</a></li>
-              <li><a href="sosisli.html">Sosisli</a></li>
-              <li><a href="hamburger.html">Hamburger</a></li>
-              <li><a href="kokorec.html">Kokoreç</a></li>
-              <li><a href="kumpir.html">Kumpir</a></li>
-            </ul>
-          </li>
-          <!-- KAHVALTILIKLAR -->
-          <li>
-            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">KAHVALTILIKLAR</a>
-            <ul class="submenu">
-              <li><a href="menemen.html">Menemen</a></li>
-              <li><a href="tost.html">Tost</a></li>
-              <li>
-                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Kahvaltı Tabağı</a>
-                <ul class="submenu">
-                  <li><a href="yumurta.html">Yumurta</a></li>
-                  <li><a href="beyaz-peynir.html">Beyaz Peynir</a></li>
-                  <li><a href="kasar-peyniri.html">Kaşar Peyniri</a></li>
-                  <li><a href="zeytin.html">Zeytin</a></li>
-                  <li><a href="domates.html">Domates</a></li>
-                  <li><a href="salatalik.html">Salatalık</a></li>
-                  <li><a href="nane.html">Nane</a></li>
-                  <li><a href="biber.html">Biber</a></li>
-                  <li><a href="acuka.html">Acuka</a></li>
-                  <li><a href="salam.html">Salam</a></li>
-                  <li><a href="borek.html">Börek</a></li>
-                  <li><a href="kakaolu-findik-kremasi.html">Kakaolu Fındık Kreması</a></li>
-                  <li><a href="zahter.html">Zahter</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <!-- GARNİTÜRLER -->
-          <li>
-            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">GARNİTÜRLER</a>
-            <ul class="submenu">
-              <li>
-                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Pilav</a>
-                <ul class="submenu">
-                  <li><a href="pirinc-pilavi.html">Pirinç Pilavı</a></li>
-                  <li><a href="bulgur-pilavi.html">Bulgur Pilavı</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Salata</a>
-                <ul class="submenu">
-                  <li><a href="mevsim-salatasi.html">Mevsim Salatası</a></li>
-                  <li><a href="coban-salatasi.html">Çoban Salatası</a></li>
-                  <li><a href="patates-salatasi.html">Patates Salatası</a></li>
-                </ul>
-              </li>
-              <li><a href="cacik.html">Cacık</a></li>
-              <li>
-                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Turşu</a>
-                <ul class="submenu">
-                  <li><a href="kornison-tursusu.html">Kornişon Turşusu</a></li>
-                  <li><a href="biber-tursusu.html">Biber Turşusu</a></li>
-                  <li><a href="jalapeno-tursusu.html">Jalapeno Turşusu</a></li>
-                </ul>
-              </li>
-              <li><a href="cig-kofte.html">Çiğ Köfte</a></li>
-            </ul>
-          </li>
-          <!-- SOSLAR -->
-          <li>
-            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">SOSLAR</a>
-            <ul class="submenu">
-              <li><a href="besamel-sos.html">Beşamel Sos</a></li>
-              <li><a href="bolonez-sos.html">Bolonez Sos</a></li>
-              <li><a href="domates-sosu.html">Domates Sosu</a></li>
-              <li><a href="haydari.html">Haydari</a></li>
-              <li><a href="mayonez.html">Mayonez</a></li>
-              <li><a href="nar-eksisi.html">Nar Ekşisi</a></li>
-              <li><a href="peynir-sosu.html">Peynir Sosu</a></li>
+              <li><a href="pages/yumurta.html">Yumurta</a></li>
+              <li><a href="pages/beyaz-peynir.html">Beyaz Peynir</a></li>
+              <li><a href="pages/kasar-peyniri.html">Kaşar Peynir</a></li>
+              <li><a href="pages/zeytin.html">Zeytin</a></li>
+              <li><a href="pages/domates.html">Domates</a></li>
+              <li><a href="pages/salatalik.html">Salatalık</a></li>
+              <li><a href="pages/nane.html">Nane</a></li>
+              <li><a href="pages/biber.html">Biber</a></li>
+              <li><a href="pages/acuka.html">Acuka</a></li>
+              <li><a href="pages/salam.html">Salam</a></li>
+              <li><a href="pages/borek.html">Börek</a></li>
+              <li><a href="pages/kakaolu-findik-kremasi.html">Kakaolu Fındık Kreması</a></li>
+              <li><a href="pages/zahter.html">Zahter</a></li>
             </ul>
           </li>
         </ul>
-      </nav>
-    </div>
-    <!-- Mobil Menü Bitimi -->
+      </li>
+      <!-- GARNİTÜRLER -->
+      <li>
+        <a href="#" class="menu-item" onclick="toggleSubmenu(event)">GARNİTÜRLER</a>
+        <ul class="submenu">
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Pilav</a>
+            <ul class="submenu">
+              <li><a href="pages/pirinc-pilavi.html">Pirinç Pilavı</a></li>
+              <li><a href="pages/bulgur-pilavi.html">Bulgur Pilavı</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Salata</a>
+            <ul class="submenu">
+              <li><a href="pages/mevsim-salatasi.html">Mevsim Salatası</a></li>
+              <li><a href="pages/coban-salatasi.html">Çoban Salatası</a></li>
+              <li><a href="pages/patates-salatasi.html">Patates Salatası</a></li>
+            </ul>
+          </li>
+          <li><a href="pages/cacik.html">Cacık</a></li>
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Turşu</a>
+            <ul class="submenu">
+              <li><a href="pages/kornison-tursusu.html">Kornişon Turşusu</a></li>
+              <li><a href="pages/biber-tursusu.html">Biber Turşusu</a></li>
+              <li><a href="pages/jalapeno-tursusu.html">Jalapeno Turşusu</a></li>
+            </ul>
+          </li>
+          <li><a href="pages/cig-kofte.html">Çiğ Köfte</a></li>
+        </ul>
+      </li>
+      <!-- SOSLAR -->
+      <li>
+        <a href="#" class="menu-item" onclick="toggleSubmenu(event)">SOSLAR</a>
+        <ul class="submenu">
+          <li><a href="pages/besamel-sos.html">Beşamel Sos</a></li>
+          <li><a href="pages/bolonez-sos.html">Bolonez Sos</a></li>
+          <li><a href="pages/domates-sosu.html">Domates Sosu</a></li>
+          <li><a href="pages/haydari.html">Haydari</a></li>
+          <li><a href="pages/mayonez.html">Mayonez</a></li>
+          <li><a href="pages/nar-eksisi.html">Nar Ekşisi</a></li>
+          <li><a href="pages/peynir-sosu.html">Peynir Sosu</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+<!-- Mobil Menü Bitimi -->
 
-    <!-- Desktop Menü Başlangıcı -->
-    <nav class="site-nav">
-      <ul>
-        <div class="logo">
-          <a href="index.html"><img src="images/logo.png" /></a>
-        </div>
-        <!-- UNLU MAMÜLLER VE TATLILAR -->
+
+<!-- Desktop Menü Başlangıcı -->
+<nav class="site-nav">
+  <ul>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" /></a>
+    </div>
+    <!-- UNLU MAMÜLLER VE TATLILAR -->
+    <li>
+      <a href="#" class="menu-item-buraya">UNLU MAM. & TATLILAR</a>
+      <ul class="submenu-buraya">
+        <li><a href="pages/ekmek.html">Ekmek</a></li>
+        <li><a href="pages/lavas.html">Lavaş</a></li>
+        <li><a href="pages/simit.html">Simit</a></li>
+        <li><a href="pages/ramazan-pidesi.html">Ramazan Pidesi</a></li>
+        <li><a href="pages/kiymali-pide.html">Kıymalı Pide</a></li>
+        <li><a href="pages/lahmacun.html">Lahmacun</a></li>
+        <li><a href="pages/borek.html">Börek</a></li>
+        <li><a href="pages/pizza.html">Pizza</a></li>
         <li>
-          <a href="#" class="menu-item-buraya">UNLU MAM. & TATLILAR</a>
+          <a href="#" class="menu-item-buraya">Kek</a>
           <ul class="submenu-buraya">
-            <li><a href="ekmek.html">Ekmek</a></li>
-            <li><a href="lavas.html">Lavaş</a></li>
-            <li><a href="simit.html">Simit</a></li>
-            <li><a href="ramazan-pidesi.html">Ramazan Pidesi</a></li>
-            <li><a href="kiymali-pide.html">Kıymalı Pide</a></li>
-            <li><a href="lahmacun.html">Lahmacun</a></li>
-            <li><a href="borek.html">Börek</a></li>
-            <li><a href="pizza.html">Pizza</a></li>
-            <li>
-              <a href="#" class="menu-item-buraya">Kek</a>
-              <ul class="submenu-buraya">
-                <li><a href="limonlu-kek.html">Limonlu Kek</a></li>
-                <li><a href="brownie.html">Brownie</a></li>
-              </ul>
-            </li>
-            <li><a href="kurabiye.html">Kurabiye</a></li>
-            <li><a href="lokum.html">Lokum</a></li>
-            <li><a href="asure.html">Aşure</a></li>
-            <li><a href="su-muhallebisi.html">Su Muhallebisi</a></li>
-            <li><a href="dondurma.html">Dondurma</a></li>
+            <li><a href="pages/limonlu-kek.html">Limonlu Kek</a></li>
+            <li><a href="pages/brownie.html">Brownie</a></li>
           </ul>
         </li>
-        <!-- YEMEKLER -->
-        <li>
-          <a href="#" class="menu-item-buraya">YEMEKLER</a>
-          <ul class="submenu-buraya">
-            <li><a href="tavuk-izgara.html">Tavuk Izgara</a></li>
-            <li><a href="kofte-izgara.html">Köfte Izgara</a></li>
-            <li><a href="balik-izgara.html">Balık Izgara</a></li>
-            <li><a href="adana-kebap.html">Adana Kebap</a></li>
-            <li><a href="taze-fasulye.html">Taze Fasulye</a></li>
-            <li><a href="zeytinyagli-yaprak-sarma.html">Zeytinyağlı Yaprak Sarma</a></li>
-            <li><a href="zeytinyagli-biber-dolma.html">Zeytinyağlı Biber Dolma</a></li>
-            <li><a href="mantarli-tavuk-sote.html">Mantarlı Tavuk Sote</a></li>
-            <li><a href="ciger.html">Ciğer</a></li>
-            <li><a href="sosisli.html">Sosisli</a></li>
-            <li><a href="hamburger.html">Hamburger</a></li>
-            <li><a href="kokorec.html">Kokoreç</a></li>
-            <li><a href="kumpir.html">Kumpir</a></li>
-          </ul>
-        </li>
-        <!-- KAHVALTILIKLAR -->
-        <li>
-          <a href="#" class="menu-item-buraya">KAHVALTILIKLAR</a>
-          <ul class="submenu-buraya">
-            <li><a href="menemen.html">Menemen</a></li>
-            <li><a href="tost.html">Tost</a></li>
-            <li>
-              <a href="#" class="menu-item-buraya">Kahvaltı Tabağı</a>
-              <ul class="submenu-buraya">
-                <li><a href="yumurta.html">Yumurta</a></li>
-                <li><a href="beyaz-peynir.html">Beyaz Peynir</a></li>
-                <li><a href="kasar-peyniri.html">Kaşar Peyniri</a></li>
-                <li><a href="zeytin.html">Zeytin</a></li>
-                <li><a href="domates.html">Domates</a></li>
-                <li><a href="salatalik.html">Salatalık</a></li>
-                <li><a href="nane.html">Nane</a></li>
-                <li><a href="biber.html">Biber</a></li>
-                <li><a href="acuka.html">Acuka</a></li>
-                <li><a href="salam.html">Salam</a></li>
-                <li><a href="borek.html">Börek</a></li>
-                <li><a href="kakaolu-findik-kremasi.html">Kakaolu Fındık Kreması</a></li>
-                <li><a href="zahter.html">Zahter</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <!-- GARNİTÜRLER -->
-        <li>
-          <a href="#" class="menu-item-buraya">GARNİTÜRLER</a>
-          <ul class="submenu-buraya">
-            <li>
-              <a href="#" class="menu-item-buraya">Pilav</a>
-              <ul class="submenu-buraya">
-                <li><a href="pirinc-pilavi.html">Pirinç Pilavı</a></li>
-                <li><a href="bulgur-pilavi.html">Bulgur Pilavı</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#" class="menu-item-buraya">Salata</a>
-              <ul class="submenu-buraya">
-                <li><a href="mevsim-salatasi.html">Mevsim Salatası</a></li>
-                <li><a href="coban-salatasi.html">Çoban Salatası</a></li>
-                <li><a href="patates-salatasi.html">Patates Salatası</a></li>
-              </ul>
-            </li>
-            <li><a href="cacik.html">Cacık</a></li>
-            <li>
-              <a href="#" class="menu-item-buraya">Turşu</a>
-              <ul class="submenu-buraya">
-                <li><a href="kornison-tursusu.html">Kornişon Turşusu</a></li>
-                <li><a href="biber-tursusu.html">Biber Turşusu</a></li>
-                <li><a href="jalapeno-tursusu.html">Jalapeno Turşusu</a></li>
-              </ul>
-            </li>
-            <li><a href="cig-kofte.html">Çiğ Köfte</a></li>
-          </ul>
-        </li>
-        <!-- SOSLAR -->
-        <li>
-          <a href="#" class="menu-item-buraya">SOSLAR</a>
-          <ul class="submenu-buraya">
-            <li><a href="besamel-sos.html">Beşamel Sos</a></li>
-            <li><a href="bolonez-sos.html">Bolonez Sos</a></li>
-            <li><a href="domates-sosu.html">Domates Sosu</a></li>
-            <li><a href="haydari.html">Haydari</a></li>
-            <li><a href="mayonez.html">Mayonez</a></li>
-            <li><a href="nar-eksisi.html">Nar Ekşisi</a></li>
-            <li><a href="peynir-sosu.html">Peynir Sosu</a></li>
-          </ul>
-        </li>
-        <!-- Arama Çubuğu -->
-        <div class="search-container">
-          <input type="text" id="searchInput" placeholder="tarif arayın..." oninput="search()" />
-          <div id="results" class="results-dropdown"></div>
-        </div>
-        <div class="whatsapp-btn">
-          <a href="https://wa.me/905451501802" class="whatsapp-btn" target="_blank"> <i class="fa-brands fa-whatsapp fa-xl"></i></a>
-        </div>
-        <div class="info-btn">
-          <a href="info.html" class="info-btn"><i class="fa-solid fa-circle-info fa-xl"></i></a>
-        </div>
+        <li><a href="pages/kurabiye.html">Kurabiye</a></li>
+        <li><a href="pages/lokum.html">Lokum</a></li>
+        <li><a href="pages/asure.html">Aşure</a></li>
+        <li><a href="pages/su-muhallebisi.html">Su Muhallebisi</a></li>
+        <li><a href="pages/dondurma.html">Dondurma</a></li>
       </ul>
-    </nav>
-    <div class="shadow-site-nav"></div>
-    <!-- Desktop Menü Bitimi -->
+    </li>
+    <!-- YEMEKLER -->
+    <li>
+      <a href="#" class="menu-item-buraya">YEMEKLER</a>
+      <ul class="submenu-buraya">
+        <li><a href="pages/tavuk-izgara.html">Tavuk Izgara</a></li>
+        <li><a href="pages/kofte-izgara.html">Köfte Izgara</a></li>
+        <li><a href="pages/balik-izgara.html">Balık Izgara</a></li>
+        <li><a href="pages/adana-kebap.html">Adana Kebap</a></li>
+        <li><a href="pages/taze-fasulye.html">Taze Fasulye</a></li>
+        <li><a href="pages/zeytinyagli-yaprak-sarma.html">Zeytinyağlı Yaprak Sarma</a></li>
+        <li><a href="pages/zeytinyagli-biber-dolma.html">Zeytinyağlı Biber Dolma</a></li>
+        <li><a href="pages/mantarli-tavuk-sote.html">Mantarlı Tavuk Sote</a></li>
+        <li><a href="pages/ciger.html">Ciğer</a></li>
+        <li><a href="pages/sosisli.html">Sosisli</a></li>
+        <li><a href="pages/hamburger.html">Hamburger</a></li>
+        <li><a href="pages/kokorec.html">Kokoreç</a></li>
+        <li><a href="pages/kumpir.html">Kumpir</a></li>
+      </ul>
+    </li>
+    <!-- KAHVALTILIKLAR -->
+    <li>
+      <a href="#" class="menu-item-buraya">KAHVALTILIKLAR</a>
+      <ul class="submenu-buraya">
+        <li><a href="pages/menemen.html">Menemen</a></li>
+        <li><a href="pages/tost.html">Tost</a></li>
+        <li>
+          <a href="#" class="menu-item-buraya">Kahvaltı Tabağı</a>
+          <ul class="submenu-buraya">
+            <li><a href="pages/yumurta.html">Yumurta</a></li>
+            <li><a href="pages/beyaz-peynir.html">Beyaz Peynir</a></li>
+            <li><a href="pages/kasar-peyniri.html">Kaşar Peyniri</a></li>
+            <li><a href="pages/zeytin.html">Zeytin</a></li>
+            <li><a href="pages/domates.html">Domates</a></li>
+            <li><a href="pages/salatalik.html">Salatalık</a></li>
+            <li><a href="pages/nane.html">Nane</a></li>
+            <li><a href="pages/biber.html">Biber</a></li>
+            <li><a href="pages/acuka.html">Acuka</a></li>
+            <li><a href="pages/salam.html">Salam</a></li>
+            <li><a href="pages/borek.html">Börek</a></li>
+            <li><a href="pages/kakaolu-findik-kremasi.html">Kakaolu Fındık Kreması</a></li>
+            <li><a href="pages/zahter.html">Zahter</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <!-- GARNİTÜRLER -->
+    <li>
+      <a href="#" class="menu-item-buraya">GARNİTÜRLER</a>
+      <ul class="submenu-buraya">
+        <li>
+          <a href="#" class="menu-item-buraya">Pilav</a>
+          <ul class="submenu-buraya">
+            <li><a href="pages/pirinc-pilavi.html">Pirinç Pilavı</a></li>
+            <li><a href="pages/bulgur-pilavi.html">Bulgur Pilavı</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu-item-buraya">Salata</a>
+          <ul class="submenu-buraya">
+            <li><a href="pages/mevsim-salatasi.html">Mevsim Salatası</a></li>
+            <li><a href="pages/coban-salatasi.html">Çoban Salatası</a></li>
+            <li><a href="pages/patates-salatasi.html">Patates Salatası</a></li>
+          </ul>
+        </li>
+        <li><a href="pages/cacik.html">Cacık</a></li>
+        <li>
+          <a href="#" class="menu-item-buraya">Turşu</a>
+          <ul class="submenu-buraya">
+            <li><a href="pages/kornison-tursusu.html">Kornişon Turşusu</a></li>
+            <li><a href="pages/biber-tursusu.html">Biber Turşusu</a></li>
+            <li><a href="pages/jalapeno-tursusu.html">Jalapeno Turşusu</a></li>
+          </ul>
+        </li>
+        <li><a href="pages/cig-kofte.html">Çiğ Köfte</a></li>
+      </ul>
+    </li>
+    <!-- SOSLAR -->
+    <li>
+      <a href="#" class="menu-item-buraya">SOSLAR</a>
+      <ul class="submenu-buraya">
+        <li><a href="pages/besamel-sos.html">Beşamel Sos</a></li>
+        <li><a href="pages/bolonez-sos.html">Bolonez Sos</a></li>
+        <li><a href="pages/domates-sosu.html">Domates Sosu</a></li>
+        <li><a href="pages/haydari.html">Haydari</a></li>
+        <li><a href="pages/mayonez.html">Mayonez</a></li>
+        <li><a href="pages/nar-eksisi.html">Nar Ekşisi</a></li>
+        <li><a href="pages/peynir-sosu.html">Peynir Sosu</a></li>
+      </ul>
+    </li>
+    <!-- Arama Çubuğu -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="tarif arayın..." oninput="search()" />
+      <div id="results" class="results-dropdown"></div>
+    </div>
+    <div class="info-btn">
+      <a href="pages/info.html" class="info-btn"><i class="fa-solid fa-circle-info fa-xl"></i></a>
+    </div>
+  </ul>
+</nav>
+<div class="shadow-site-nav"></div>
+<!-- Desktop Menü Bitimi -->
+
     <!-- MENÜ  BİTİMİ -->
 
+    <!-- İçerik Başlangıcı -->
     <div class="video-container">
-        <video autoplay loop muted playsinline class="background-video">
-            <source src="images/video.mp4" type="video/mp4">
-            Tarayıcınız video oynatmayı desteklemiyor.
-        </video>
-    </div>
-    <div class="content-container">
-        <img src="images/anasayfa.png" alt="Anasayfa Resmi" class="main-image">
-        <h1 class="slogan-text">Harika Tarifler Burada</h1>
-        <p class="slogan-subtext">Dilediğiniz Tarifi Seçin Kendi Mutfağınızın Şefi Olun...</p>
-    </div>
-    <!--
+      <video autoplay loop muted playsinline class="background-video">
+          <source src="images/video.mp4" type="video/mp4">
+          Tarayıcınız video oynatmayı desteklemiyor.
+      </video>
+  </div>
+  <div class="content-container">
+      <img src="images/anasayfa.png" alt="Anasayfa Resmi" class="main-image">
+      <h1 class="slogan-text">Harika Tarifler Burada</h1>
+      <p class="slogan-subtext">Dilediğiniz Tafifi Seçin Kendi Mutfağınızın Şefi Olun...</p>
+  </div>
+    <!-- Icerik Bitimi -->
+
+<!--   
 <div class="hazirlaniyor">
-<div class="chef"><img src="images/chef.gif" alt="chef gif'i"></div>
+<div class="chef"><img src="../images/chef.gif" alt="chef gif'i"></div>
 <div class="say_haz_asa">Sayfa Hazırlık Aşamasında</div>
 </div>
 -->
 
+  <!--
+    <div class="video-container">
+      <video autoplay loop muted playsinline class="background-video">
+          <source src="images/video.mp4" type="video/mp4">
+          Tarayıcınız video oynatmayı desteklemiyor.
+      </video>
+  </div>
+  <div class="content-container">
+      <img src="images/anasayfa.png" alt="Anasayfa Resmi" class="main-image">
+      <h1 class="slogan-text">Harika Tarifler Burada</h1>
+      <p class="slogan-subtext">Dilediğiniz Tafifi Seçin Kendi Mutfağınızın Şefi Olun...</p>
+  </div>
+  -->
 
     <!-- JavaScript Başlangıcı -->
     <script>
@@ -471,68 +486,70 @@
           document.getElementById("malzeme20Miktari").innerHTML = "";
         }
       }
-      // Arama Kutusu
-      const data = [
-        { title: "Ekmek", url: "ekmek.html" },
-        { title: "Lavaş", url: "lavas.html" },
-        { title: "Simit", url: "simit.html" },
-        { title: "Ramazan Pidesi", url: "ramazan-pidesi.html" },
-        { title: "Kıymalı Pide", url: "kiymali-pide.html" },
-        { title: "Lahmacun", url: "lahmacun.html" },
-        { title: "Börek", url: "borek.html" },
-        { title: "Pizza", url: "pizza.html" },
-        { title: "Limonlu Kek", url: "limonlu-kek.html" },
-        { title: "Brownie", url: "brownie.html" },
-        { title: "Kurabiye", url: "kurabiye.html" },
-        { title: "Lokum", url: "lokum.html" },
-        { title: "Aşure", url: "asure.html" },
-        { title: "Su Muhallebisi", url: "su-muhallebisi.html" },
-        { title: "Dondurma", url: "dondurma.html" },
-        { title: "Tavuk Izgara", url: "tavuk-izgara.html" },
-        { title: "Köfte Izgara", url: "kofte-izgara.html" },
-        { title: "Balık Izgara", url: "balik-izgara.html" },
-        { title: "Adana Kebap", url: "adana-kebap.html" },
-        { title: "Taze Fasulye", url: "taze-fasulye.html" },
-        { title: "Zeytinyağlı Yaprak Sarma", url: "zeytinyagli-yaprak-sarma.html" },
-        { title: "Zeytinyağlı Biber Dolma", url: "zeytinyagli-biber-dolma.html" },
-        { title: "Mantarlı Tavuk Sote", url: "mantarli-tavuk-sote.html" },
-        { title: "Ciğer", url: "ciger.html" },
-        { title: "Sosisli", url: "sosisli.html" },
-        { title: "Hamburger", url: "hamburger.html" },
-        { title: "Kokoreç", url: "kokorec.html" },
-        { title: "Kumpir", url: "kumpir.html" },
-        { title: "Menemen", url: "menemen.html" },
-        { title: "Tost", url: "tost.html" },
-        { title: "Yumurta", url: "yumurta.html" },
-        { title: "Beyaz Peynir", url: "beyaz-peynir.html" },
-        { title: "Kaşar Peyniri", url: "kasar-peyniri.html" },
-        { title: "Zeytin", url: "zeytin.html" },
-        { title: "Domates", url: "domates.html" },
-        { title: "Salatalık", url: "salatalik.html" },
-        { title: "Nane", url: "nane.html" },
-        { title: "Biber", url: "biber.html" },
-        { title: "Acuka", url: "acuka.html" },
-        { title: "Salam", url: "salam.html" },
-        { title: "Börek", url: "borek.html" },
-        { title: "Kakaolu Fındık Kreması", url: "kakaolu-findik-kremasi.html" },
-        { title: "Zahter", url: "zahter.html" },
-        { title: "Pirinç Pilavı", url: "pirinc-pilavi.html" },
-        { title: "Bulgur Pilavı", url: "bulgur-pilavi.html" },
-        { title: "Mevsim Salatası", url: "mevsim-salatasi.html" },
-        { title: "Çoban Salatası", url: "coban-salatasi.html" },
-        { title: "Patates Salatası", url: "patates-salatasi.html" },
-        { title: "Cacık", url: "cacik.html" },
-        { title: "Kornişon Turşusu", url: "kornison-tursusu.html" },
-        { title: "Biber Turşusu", url: "biber-tursusu.html" },
-        { title: "Jalapeno Turşusu", url: "jalapeno-tursusu.html" },
-        { title: "Çiğ Köfte", url: "cig-kofte.html" },
-        { title: "Beşamel Sos", url: "besamel-sos.html" },
-        { title: "Bolonez Sos", url: "bolonez-sos.html" },
-        { title: "Domates Sosu", url: "domates-sosu.html" },
-        { title: "Haydari", url: "haydari.html" },
-        { title: "Mayonez", url: "mayonez.html" },
-        { title: "Nar Ekşisi", url: "nar-eksisi.html" },
-        { title: "Peynir Sosu", url: "peynir-sosu.html" },
+
+            // Arama Kutusu
+            const data = [
+            { title: "Ekmek", url: "pages/ekmek.html" },
+        { title: "Lavaş", url: "pages/lavas.html" },
+        { title: "Simit", url: "pages/simit.html" },
+        { title: "Ramazan Pidesi", url: "pages/ramazan-pidesi.html" },
+        { title: "Kıymalı Pide", url: "pages/kiymali-pide.html" },
+        { title: "Lahmacun", url: "pages/lahmacun.html" },
+        { title: "Börek", url: "pages/borek.html" },
+        { title: "Pizza", url: "pages/pizza.html" },
+        { title: "Limonlu Kek", url: "pages/limonlu-kek.html" },
+        { title: "Brownie", url: "pages/brownie.html" },
+        { title: "Kurabiye", url: "pages/kurabiye.html" },
+        { title: "Lokum", url: "pages/lokum.html" },
+        { title: "Aşure", url: "pages/asure.html" },
+        { title: "Su Muhallebisi", url: "pages/su-muhallebisi.html" },
+        { title: "Dondurma", url: "pages/dondurma.html" },
+        { title: "Tavuk Izgara", url: "pages/tavuk-izgara.html" },
+        { title: "Köfte Izgara", url: "pages/kofte-izgara.html" },
+        { title: "Balık Izgara", url: "pages/balik-izgara.html" },
+        { title: "Adana Kebap", url: "pages/adana-kebap.html" },
+        { title: "Taze Fasulye", url: "pages/taze-fasulye.html" },
+        { title: "Zeytinyağlı Yaprak Sarma", url: "pages/zeytinyagli-yaprak-sarma.html" },
+        { title: "Zeytinyağlı Biber Dolma", url: "pages/zeytinyagli-biber-dolma.html" },
+        { title: "Mantarlı Tavuk Sote", url: "pages/mantarli-tavuk-sote.html" },
+        { title: "Ciğer", url: "pages/ciger.html" },
+        { title: "Sosisli", url: "pages/sosisli.html" },
+        { title: "Hamburger", url: "pages/hamburger.html" },
+        { title: "Kokoreç", url: "pages/kokorec.html" },
+        { title: "Kumpir", url: "pages/kumpir.html" },
+        { title: "Menemen", url: "pages/menemen.html" },
+        { title: "Tost", url: "pages/tost.html" },
+        { title: "Yumurta", url: "pages/yumurta.html" },
+        { title: "Beyaz Peynir", url: "pages/beyaz-peynir.html" },
+        { title: "Kaşar Peyniri", url: "pages/kasar-peyniri.html" },
+        { title: "Zeytin", url: "pages/zeytin.html" },
+        { title: "Domates", url: "pages/domates.html" },
+        { title: "Salatalık", url: "pages/salatalik.html" },
+        { title: "Nane", url: "pages/nane.html" },
+        { title: "Biber", url: "pages/biber.html" },
+        { title: "Acuka", url: "pages/acuka.html" },
+        { title: "Salam", url: "pages/salam.html" },
+        { title: "Börek", url: "pages/borek.html" },
+        { title: "Kakaolu Fındık Kreması", url: "pages/kakaolu-findik-kremasi.html" },
+        { title: "Zahter", url: "pages/zahter.html" },
+        { title: "Pirinç Pilavı", url: "pages/pirinc-pilavi.html" },
+        { title: "Bulgur Pilavı", url: "pages/bulgur-pilavi.html" },
+        { title: "Mevsim Salatası", url: "pages/mevsim-salatasi.html" },
+        { title: "Çoban Salatası", url: "pages/coban-salatasi.html" },
+        { title: "Patates Salatası", url: "pages/patates-salatasi.html" },
+        { title: "Cacık", url: "pages/cacik.html" },
+        { title: "Kornişon Turşusu", url: "pages/kornison-tursusu.html" },
+        { title: "Biber Turşusu", url: "pages/biber-tursusu.html" },
+        { title: "Jalapeno Turşusu", url: "pages/jalapeno-tursusu.html" },
+        { title: "Çiğ Köfte", url: "pages/cig-kofte.html" },
+        { title: "Beşamel Sos", url: "pages/besamel-sos.html" },
+        { title: "Bolonez Sos", url: "pages/bolonez-sos.html" },
+        { title: "Domates Sosu", url: "pages/domates-sosu.html" },
+        { title: "Haydari", url: "pages/haydari.html" },
+        { title: "Mayonez", url: "pages/mayonez.html" },
+        { title: "Nar Ekşisi", url: "pages/nar-eksisi.html" },
+        { title: "Peynir Sosu", url: "pages/peynir-sosu.html" },
+
       ];
 
       function search() {
@@ -579,6 +596,7 @@
           resultsContainer.style.display = "block";
         }
       });
+
     </script>
     <!-- JavaScript Bitimi -->
   </body>
