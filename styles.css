@@ -116,6 +116,7 @@ html {
   z-index: 999;
   box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2); /* Gölge efekti */
   padding: 0 0px;
+  border-bottom: 1px solid #ffffff26;
 }
 
 .site-nav ul {
@@ -217,10 +218,9 @@ html {
 .logo {
   justify-content: center;
   align-content: center;
-  padding-right: 50px;
-  margin-left: 50px;
   color: #ffffff;
   float: left;
+  padding-right: 50px;
 }
 /*
     font-family: Arial, sans-serif;
@@ -234,9 +234,8 @@ html {
 
 .search-container {
   position: relative;
-  width: 200px;
-  padding-top: 8px;
-  margin-left: 30px;
+  width: 10%;
+  padding-top: 11px;
 }
 
 #searchInput {
@@ -284,20 +283,10 @@ html {
   background-color: #f1f1f1;
 }
 
-.whatsapp-btn {
-  color: rgb(228, 228, 228);
-  padding-left: 20px;
-  padding-top: 15px;
-  align-items: center;
-}
-
-.whatsapp-btn:hover {
-  color: rgb(208, 255, 186);
-}
 .info-btn {
   color: rgb(228, 228, 228);
   padding-left: 20px;
-  padding-top: 15px;
+  padding-top: 18px;
   align-items: center;
 }
 
@@ -876,8 +865,8 @@ table.tarif-tablosu tr:hover td {
   .logo {
     display: fixed;
     margin: 0 auto; /* Merkezle */
-    padding: 5px; /* Daha az boşluk */
-    margin-left: 530px;
+   
+    margin-left: 500px;
   }
   .logo img {
     width: 150px; /* Daha küçük genişlik */
