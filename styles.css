@@ -730,6 +730,20 @@ input[type="number"]:placeholder-shown {
   height: 90%;
   width: 100%;
   animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-delay: 9s; /* 9 saniye gecikme */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Ana resim */
