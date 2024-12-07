@@ -103,6 +103,7 @@
         { title: "Mayonez", url: "mayonez.html" },
         { title: "Nar Ekşisi", url: "nar-eksisi.html" },
         { title: "Peynir Sosu", url: "peynir-sosu.html" },
+        { title: "Yoğurt", url: "yogurt.html" },
       ];
 
       function search() {
@@ -149,3 +150,29 @@
           resultsContainer.style.display = "block";
         }
       });
+
+
+
+
+      // LocalStorage'dan Tema Yükle
+      document.addEventListener('DOMContentLoaded', function () {
+        const savedTheme = localStorage.getItem('theme') || 'style-light.css';
+        const themeLink = document.getElementById('theme-link');
+        const themeIcon = document.getElementById('theme-icon');
+
+        themeLink.href = `../styles/${savedTheme}`;
+        themeIcon.className = savedTheme === 'style-light.css' ? 'fas fa-sun' : 'fas fa-moon';
+      });
+
+      // Tema Geçiş Fonksiyonu
+      function toggleTheme() {
+        const themeLink = document.getElementById('theme-link');
+        const themeIcon = document.getElementById('theme-icon');
+
+        const currentTheme = themeLink.href.includes('style-light.css') ? 'style-light.css' : 'style-dark.css';
+        const newTheme = currentTheme === 'style-light.css' ? 'style-dark.css' : 'style-light.css';
+
+        themeLink.href = `../styles/${newTheme}`;
+        themeIcon.className = newTheme === 'style-light.css' ? 'fas fa-sun' : 'fas fa-moon';
+        localStorage.setItem('theme', newTheme);
+      }
