@@ -1039,7 +1039,13 @@ input[type="number"]:placeholder-shown {
   .search-container {
     position: fixed;
     right: 0;
-    width: 52%;
+    width: 50%;
+
+    #searchInput {
+  width: 65%;
+
+}
+
 
  
     
