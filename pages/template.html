@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarif Defteri</title>
+    <!-- Harici stil dosyası ve ikonlar için font bağlantıları -->
+    <link id="theme-link" rel="stylesheet" href="../style-light.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- MENÜ  BAŞLANGICI -->
+    <!-- Mobil Menü Başlangııcı -->
+    <!-- Menü Butonu (Hamburger Menü) -->
+    <div class="menu-button" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <!-- Sidebar Menü -->
+    <div id="sidebar" class="sidebar">
+      <div class="close-btn" onclick="toggleSidebar()">&times;</div>
+      <nav>
+        <ul>
+          <!-- UNLU MAMÜLLER VE TATLILAR -->
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">UNLU MAM. & TATLILAR</a>
+            <ul class="submenu">
+              <li><a href="ekmek.html">Ekmek</a></li>
+              <li><a href="lavas.html">Lavaş</a></li>
+              <li><a href="simit.html">Simit</a></li>
+              <li><a href="ramazan-pidesi.html">Ramazan Pidesi</a></li>
+              <li><a href="kiymali-pide.html">Kıymalı Pide</a></li>
+              <li><a href="lahmacun.html">Lahmacun</a></li>
+              <li><a href="borek.html">Börek</a></li>
+              <li><a href="pizza.html">Pizza</a></li>
+              <li>
+                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Kek</a>
+                <ul class="submenu">
+                  <li><a href="limonlu-kek.html">Limonlu Kek</a></li>
+                  <li><a href="brownie.html">Brownie</a></li>
+                </ul>
+              </li>
+              <li><a href="kurabiye.html">Kurabiye</a></li>
+              <li><a href="lokum.html">Lokum</a></li>
+              <li><a href="asure.html">Aşure</a></li>
+              <li><a href="su-muhallebisi.html">Su Muhallebisi</a></li>
+              <li><a href="dondurma.html">Dondurma</a></li>
+            </ul>
+          </li>
+          <!-- YEMEKLER -->
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">YEMEKLER</a>
+            <ul class="submenu">
+              <li><a href="tavuk-izgara.html">Tavuk Izgara</a></li>
+              <li><a href="kofte-izgara.html">Köfte Izgara</a></li>
+              <li><a href="balik-izgara.html">Balık Izgara</a></li>
+              <li><a href="adana-kebap.html">Adana Kebap</a></li>
+              <li><a href="taze-fasulye.html">Taze Fasulye</a></li>
+              <li><a href="zeytinyagli-yaprak-sarma.html">Zeytinyağlı Yaprak Sarma</a></li>
+              <li><a href="zeytinyagli-biber-dolma.html">Zeytinyağlı Biber Dolma</a></li>
+              <li><a href="mantarli-tavuk-sote.html">Mantarlı Tavuk Sote</a></li>
+              <li><a href="ciger.html">Ciğer</a></li>
+              <li><a href="sosisli.html">Sosisli</a></li>
+              <li><a href="hamburger.html">Hamburger</a></li>
+              <li><a href="kokorec.html">Kokoreç</a></li>
+              <li><a href="kumpir.html">Kumpir</a></li>
+            </ul>
+          </li>
+          <!-- KAHVALTILIKLAR -->
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">KAHVALTILIKLAR</a>
+            <ul class="submenu">
+              <li><a href="menemen.html">Menemen</a></li>
+              <li><a href="tost.html">Tost</a></li>
+              <li>
+                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Kahvaltı Tabağı</a>
+                <ul class="submenu">
+                  <li><a href="yumurta.html">Yumurta</a></li>
+                  <li><a href="beyaz-peynir.html">Beyaz Peynir</a></li>
+                  <li><a href="kasar-peyniri.html">Kaşar Peyniri</a></li>
+                  <li><a href="zeytin.html">Zeytin</a></li>
+                  <li><a href="domates.html">Domates</a></li>
+                  <li><a href="salatalik.html">Salatalık</a></li>
+                  <li><a href="nane.html">Nane</a></li>
+                  <li><a href="biber.html">Biber</a></li>
+                  <li><a href="acuka.html">Acuka</a></li>
+                  <li><a href="salam.html">Salam</a></li>
+                  <li><a href="borek.html">Börek</a></li>
+                  <li><a href="kakaolu-findik-kremasi.html">Kakaolu Fındık Kreması</a></li>
+                  <li><a href="zahter.html">Zahter</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- GARNİTÜRLER -->
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">GARNİTÜRLER</a>
+            <ul class="submenu">
+              <li>
+                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Pilav</a>
+                <ul class="submenu">
+                  <li><a href="pirinc-pilavi.html">Pirinç Pilavı</a></li>
+                  <li><a href="bulgur-pilavi.html">Bulgur Pilavı</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Salata</a>
+                <ul class="submenu">
+                  <li><a href="mevsim-salatasi.html">Mevsim Salatası</a></li>
+                  <li><a href="coban-salatasi.html">Çoban Salatası</a></li>
+                  <li><a href="patates-salatasi.html">Patates Salatası</a></li>
+                </ul>
+              </li>
+              <li><a href="cacik.html">Cacık</a></li>
+              <li><a href="yogurt.html">Yoğurt</a></li>
+              <li>
+                <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Turşu</a>
+                <ul class="submenu">
+                  <li><a href="kornison-tursusu.html">Kornişon Turşusu</a></li>
+                  <li><a href="biber-tursusu.html">Biber Turşusu</a></li>
+                  <li><a href="jalapeno-tursusu.html">Jalapeno Turşusu</a></li>
+                </ul>
+              </li>
+              <li><a href="cig-kofte.html">Çiğ Köfte</a></li>
+            </ul>
+          </li>
+          <!-- SOSLAR -->
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">SOSLAR</a>
+            <ul class="submenu">
+              <li><a href="besamel-sos.html">Beşamel Sos</a></li>
+              <li><a href="bolonez-sos.html">Bolonez Sos</a></li>
+              <li><a href="domates-sosu.html">Domates Sosu</a></li>
+              <li><a href="haydari.html">Haydari</a></li>
+              <li><a href="mayonez.html">Mayonez</a></li>
+              <li><a href="nar-eksisi.html">Nar Ekşisi</a></li>
+              <li><a href="peynir-sosu.html">Peynir Sosu</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Mobil Menü Bitimi -->
+
+    <!-- Desktop Menü Başlangıcı -->
+    <nav class="site-nav">
+      <div class="logo" onclick="window.location.href='../index.html';" style="cursor:pointer;"><img class="logo_icon" src="../images/logo_icon.svg"><span class="logo_text1" >tarif<span class="logo_text2" >defteri</div>
+      <ul>
+        <!-- UNLU MAMÜLLER VE TATLILAR -->
+        <li>
+          <a href="#" class="menu-item-buraya">UNLU MAM. & TATLILAR</a>
+          <ul class="submenu-buraya">
+            <li><a href="ekmek.html">Ekmek</a></li>
+            <li><a href="lavas.html">Lavaş</a></li>
+            <li><a href="simit.html">Simit</a></li>
+            <li><a href="ramazan-pidesi.html">Ramazan Pidesi</a></li>
+            <li><a href="kiymali-pide.html">Kıymalı Pide</a></li>
+            <li><a href="lahmacun.html">Lahmacun</a></li>
+            <li><a href="borek.html">Börek</a></li>
+            <li><a href="pizza.html">Pizza</a></li>
+            <li>
+              <a href="#" class="menu-item-buraya">Kek</a>
+              <ul class="submenu-buraya">
+                <li><a href="limonlu-kek.html">Limonlu Kek</a></li>
+                <li><a href="brownie.html">Brownie</a></li>
+              </ul>
+            </li>
+            <li><a href="kurabiye.html">Kurabiye</a></li>
+            <li><a href="lokum.html">Lokum</a></li>
+            <li><a href="asure.html">Aşure</a></li>
+            <li><a href="su-muhallebisi.html">Su Muhallebisi</a></li>
+            <li><a href="dondurma.html">Dondurma</a></li>
+          </ul>
+        </li>
+        <!-- YEMEKLER -->
+        <li>
+          <a href="#" class="menu-item-buraya">YEMEKLER</a>
+          <ul class="submenu-buraya">
+            <li><a href="tavuk-izgara.html">Tavuk Izgara</a></li>
+            <li><a href="kofte-izgara.html">Köfte Izgara</a></li>
+            <li><a href="balik-izgara.html">Balık Izgara</a></li>
+            <li><a href="adana-kebap.html">Adana Kebap</a></li>
+            <li><a href="taze-fasulye.html">Taze Fasulye</a></li>
+            <li><a href="zeytinyagli-yaprak-sarma.html">Zeytinyağlı Yaprak Sarma</a></li>
+            <li><a href="zeytinyagli-biber-dolma.html">Zeytinyağlı Biber Dolma</a></li>
+            <li><a href="mantarli-tavuk-sote.html">Mantarlı Tavuk Sote</a></li>
+            <li><a href="ciger.html">Ciğer</a></li>
+            <li><a href="sosisli.html">Sosisli</a></li>
+            <li><a href="hamburger.html">Hamburger</a></li>
+            <li><a href="kokorec.html">Kokoreç</a></li>
+            <li><a href="kumpir.html">Kumpir</a></li>
+          </ul>
+        </li>
+        <!-- KAHVALTILIKLAR -->
+        <li>
+          <a href="#" class="menu-item-buraya">KAHVALTILIKLAR</a>
+          <ul class="submenu-buraya">
+            <li><a href="menemen.html">Menemen</a></li>
+            <li><a href="tost.html">Tost</a></li>
+            <li>
+              <a href="#" class="menu-item-buraya">Kahvaltı Tabağı</a>
+              <ul class="submenu-buraya">
+                <li><a href="yumurta.html">Yumurta</a></li>
+                <li><a href="beyaz-peynir.html">Beyaz Peynir</a></li>
+                <li><a href="kasar-peyniri.html">Kaşar Peyniri</a></li>
+                <li><a href="zeytin.html">Zeytin</a></li>
+                <li><a href="domates.html">Domates</a></li>
+                <li><a href="salatalik.html">Salatalık</a></li>
+                <li><a href="nane.html">Nane</a></li>
+                <li><a href="biber.html">Biber</a></li>
+                <li><a href="acuka.html">Acuka</a></li>
+                <li><a href="salam.html">Salam</a></li>
+                <li><a href="borek.html">Börek</a></li>
+                <li><a href="kakaolu-findik-kremasi.html">Kakaolu Fındık Kreması</a></li>
+                <li><a href="zahter.html">Zahter</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- GARNİTÜRLER -->
+        <li>
+          <a href="#" class="menu-item-buraya">GARNİTÜRLER</a>
+          <ul class="submenu-buraya">
+            <li>
+              <a href="#" class="menu-item-buraya">Pilav</a>
+              <ul class="submenu-buraya">
+                <li><a href="pirinc-pilavi.html">Pirinç Pilavı</a></li>
+                <li><a href="bulgur-pilavi.html">Bulgur Pilavı</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="menu-item-buraya">Salata</a>
+              <ul class="submenu-buraya">
+                <li><a href="mevsim-salatasi.html">Mevsim Salatası</a></li>
+                <li><a href="coban-salatasi.html">Çoban Salatası</a></li>
+                <li><a href="patates-salatasi.html">Patates Salatası</a></li>
+              </ul>
+            </li>
+            <li><a href="cacik.html">Cacık</a></li>
+            <li><a href="yogurt.html">Yoğurt</a></li>
+            <li>
+              <a href="#" class="menu-item-buraya">Turşu</a>
+              <ul class="submenu-buraya">
+                <li><a href="kornison-tursusu.html">Kornişon Turşusu</a></li>
+                <li><a href="biber-tursusu.html">Biber Turşusu</a></li>
+                <li><a href="jalapeno-tursusu.html">Jalapeno Turşusu</a></li>
+              </ul>
+            </li>
+            <li><a href="cig-kofte.html">Çiğ Köfte</a></li>
+          </ul>
+        </li>
+        <!-- SOSLAR -->
+        <li>
+          <a href="#" class="menu-item-buraya">SOSLAR</a>
+          <ul class="submenu-buraya">
+            <li><a href="besamel-sos.html">Beşamel Sos</a></li>
+            <li><a href="bolonez-sos.html">Bolonez Sos</a></li>
+            <li><a href="domates-sosu.html">Domates Sosu</a></li>
+            <li><a href="haydari.html">Haydari</a></li>
+            <li><a href="mayonez.html">Mayonez</a></li>
+            <li><a href="nar-eksisi.html">Nar Ekşisi</a></li>
+            <li><a href="peynir-sosu.html">Peynir Sosu</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="search-container"><input type="text" id="searchInput" placeholder="tarif arayın..." oninput="search()" /><div id="results" class="results-dropdown"></div></div>
+      <button class="theme-toggle" onclick="toggleTheme()"><i id="theme-icon" class="fas fa-sun"></i></button>
+    </nav>
+    <div class="shadow-site-nav"></div>
+    <!-- Desktop Menü Bitimi -->
+    <!-- MENÜ  BİTİMİ -->
+
+    <!-- İçerik Başlangıcı -->
+    <div class="container">
+      <!-- Yemek İsmi -->
+      <div class="food_name">YEMEK İSMİ</div>
+      <!-- Malzemeler Kartı -->
+      <div class="card">
+        <div class="food_image"><img src="../images/food-images/_food.png" alt="food image" /></div>
+        <div class="card_header">
+          <img class="card_header_icon" src="../images/mal.svg" />
+          <span class="card_header_text">MALZEMELER</span>
+        </div>
+        <div class="card_header_info">Kaliteli ve taze malzemeler tercih ediniz.</div>
+        <div class="table_container">
+          <table class="malzeme-tablosu">
+            <tr>
+              <td>
+                <span class="cell-header">Ana Malzeme</span>
+                <span class="normal-text">Açıklama</span>
+              </td>
+              <td class="input-hucre">
+                <div class="input-container">
+                  <input type="number" id="anaMalzeme" name="anaMalzeme" min="0" placeholder="Miktar girin" oninput="limitInputLength(this)" onkeypress="return isNumberKey(event)" autocomplete="off" />
+                  <span id="unit" style="display: none">gr</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme1Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme2Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme3Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme4Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme5Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme6Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme7Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme8Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme9Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme10Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme11Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme12Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme13Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme14Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme15Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme16Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme17Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme18Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme19Miktari"></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Malzeme</span><span class="normal-text">Açıklama</span></td>
+              <td id="malzeme20Miktari"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- Tarif Kartı -->
+      <div class="card">
+        <div class="card_header">
+          <img class="card_header_icon" src="../images/tar.svg" />
+          <span class="card_header_text">TARİF</span>
+        </div>
+        <div class="card_header_info">Önce ekipmanlarınızı hazırlayın</div>
+        <div class="table_container">
+          <table class="tarif-tablosu">
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+            <tr>
+              <td><span class="cell-header">Aşama</span><span class="normal-text">Açıklama</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Icerik Bitimi -->
+
+    <!--
+<div class="hazirlaniyor">
+<div class="chef"><img src="images/chef.gif" alt="chef gif'i"></div>
+<div class="say_haz_asa">Sayfa Hazırlık Aşamasında</div>
+</div>
+-->
+
+  <!--
+    <div class="video-container">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="images/video.mp4" type="video/mp4">
+            Tarayıcınız video oynatmayı desteklemiyor.
+        </video>
+    </div>
+    <div class="content-container">
+        <img src="images/anasayfa.png" alt="Anasayfa Resmi" class="main-image">
+        <h1 class="slogan-text">Harika Tarifler Burada</h1>
+        <p class="slogan-subtext">Dilediğiniz Tafifi Seçin Kendi Mutfağınızın Şefi Olun...</p>
+    </div>
+  -->
+
+    <!-- JavaScript Başlangıcı -->
+    <script>
+
+      // Sayfa yüklendiğinde input ve hücreleri temizler
+      // Bu fonksiyon sayfa her yüklendiğinde çalışır ve input alanını ve malzeme hücrelerini temizler.
+      window.onload = function () {
+        // Ana malzeme miktarı giriş alanını temizler
+        document.getElementById("anaMalzeme").value = "";
+
+        // Malzeme hücrelerini temizler (boş bırakır)
+        document.getElementById("malzeme1Miktari").innerHTML = "";
+        document.getElementById("malzeme2Miktari").innerHTML = "";
+        document.getElementById("malzeme3Miktari").innerHTML = "";
+        document.getElementById("malzeme4Miktari").innerHTML = "";
+        document.getElementById("malzeme5Miktari").innerHTML = "";
+        document.getElementById("malzeme6Miktari").innerHTML = "";
+        document.getElementById("malzeme7Miktari").innerHTML = "";
+        document.getElementById("malzeme8Miktari").innerHTML = "";
+        document.getElementById("malzeme9Miktari").innerHTML = "";
+        document.getElementById("malzeme10Miktari").innerHTML = "";
+        document.getElementById("malzeme11Miktari").innerHTML = "";
+        document.getElementById("malzeme12Miktari").innerHTML = "";
+        document.getElementById("malzeme13Miktari").innerHTML = "";
+        document.getElementById("malzeme14Miktari").innerHTML = "";
+        document.getElementById("malzeme15Miktari").innerHTML = "";
+        document.getElementById("malzeme16Miktari").innerHTML = "";
+        document.getElementById("malzeme17Miktari").innerHTML = "";
+        document.getElementById("malzeme18Miktari").innerHTML = "";
+        document.getElementById("malzeme19Miktari").innerHTML = "";
+        document.getElementById("malzeme20Miktari").innerHTML = "";
+      };
+
+      // Input alanına girilen değeri 4 hane ile sınırlar
+      // Kullanıcı 4 haneden fazla rakam girmeye çalışırsa fazlalık kısmı keser.
+      function limitInputLength(input) {
+        // Değer 4 hane ile sınırlanır
+        if (input.value.length > 4) {
+          input.value = input.value.slice(0, 4); // İlk 4 haneyi korur, fazlasını keser
+        }
+        calculateMaterials(); // Her input değişikliğinde hesaplamaları günceller
+      }
+
+      // Kullanıcı sadece rakam girebilir (0-9 arası)
+      // Bu fonksiyon, basılan tuşun sadece rakam olup olmadığını kontrol eder.
+      function isNumberKey(evt) {
+        var charCode = evt.which ? evt.which : evt.keyCode;
+        // Sadece 0-9 arasındaki rakamlara izin verilir
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+          return false; // Rakam dışı karakterler engellenir
+        }
+        return true; // Rakamlar kabul edilir
+      }
+
+      // Ana malzeme miktarına göre diğer malzeme miktarlarını hesaplar
+      // Girilen ana malzeme miktarına göre %10, %20 ve %30 oranında malzeme miktarlarını hesaplayıp hücrelere ekler.
+      function calculateMaterials() {
+        var anaMalzeme = document.getElementById("anaMalzeme").value; // Ana malzeme değerini alır
+        var unit = document.getElementById("unit"); // "gr" birimini temsil eden span elemanını alır
+
+        // Eğer bir değer girildiyse hesapla, yoksa hücreleri boş bırak
+        if (anaMalzeme && anaMalzeme > 0) {
+          unit.style.display = "inline"; // "gr" birimini göster
+
+          // Malzeme oranlarını hesapla ve tam sayıya yuvarla
+          var malzeme1 = Math.floor(anaMalzeme * 0.01);
+          var malzeme2 = Math.floor(anaMalzeme * 0.02);
+          var malzeme3 = Math.floor(anaMalzeme * 0.03);
+          var malzeme4 = Math.floor(anaMalzeme * 0.04);
+          var malzeme5 = Math.floor(anaMalzeme * 0.05);
+          var malzeme6 = Math.floor(anaMalzeme * 0.06);
+          var malzeme7 = Math.floor(anaMalzeme * 0.07);
+          var malzeme8 = Math.floor(anaMalzeme * 0.08);
+          var malzeme9 = Math.floor(anaMalzeme * 0.09);
+          var malzeme10 = Math.floor(anaMalzeme * 0.1);
+          var malzeme11 = Math.floor(anaMalzeme * 0.11);
+          var malzeme12 = Math.floor(anaMalzeme * 0.12);
+          var malzeme13 = Math.floor(anaMalzeme * 0.13);
+          var malzeme14 = Math.floor(anaMalzeme * 0.14);
+          var malzeme15 = Math.floor(anaMalzeme * 0.15);
+          var malzeme16 = Math.floor(anaMalzeme * 0.16);
+          var malzeme17 = Math.floor(anaMalzeme * 0.17);
+          var malzeme18 = Math.floor(anaMalzeme * 0.18);
+          var malzeme19 = Math.floor(anaMalzeme * 0.19);
+          var malzeme20 = Math.floor(anaMalzeme * 0.2);
+
+          // Hücrelere hesaplanan değerleri ve birimi ekle
+          document.getElementById("malzeme1Miktari").innerHTML = malzeme1 + " gr";
+          document.getElementById("malzeme2Miktari").innerHTML = malzeme2 + " gr";
+          document.getElementById("malzeme3Miktari").innerHTML = malzeme3 + " gr";
+          document.getElementById("malzeme4Miktari").innerHTML = malzeme4 + " gr";
+          document.getElementById("malzeme5Miktari").innerHTML = malzeme5 + " gr";
+          document.getElementById("malzeme6Miktari").innerHTML = malzeme6 + " gr";
+          document.getElementById("malzeme7Miktari").innerHTML = malzeme7 + " gr";
+          document.getElementById("malzeme8Miktari").innerHTML = malzeme8 + " gr";
+          document.getElementById("malzeme9Miktari").innerHTML = malzeme9 + " gr";
+          document.getElementById("malzeme10Miktari").innerHTML = malzeme10 + " gr";
+          document.getElementById("malzeme11Miktari").innerHTML = malzeme11 + " gr";
+          document.getElementById("malzeme12Miktari").innerHTML = malzeme12 + " gr";
+          document.getElementById("malzeme13Miktari").innerHTML = malzeme13 + " gr";
+          document.getElementById("malzeme14Miktari").innerHTML = malzeme14 + " gr";
+          document.getElementById("malzeme15Miktari").innerHTML = malzeme15 + " gr";
+          document.getElementById("malzeme16Miktari").innerHTML = malzeme16 + " gr";
+          document.getElementById("malzeme17Miktari").innerHTML = malzeme17 + " gr";
+          document.getElementById("malzeme18Miktari").innerHTML = malzeme18 + " gr";
+          document.getElementById("malzeme19Miktari").innerHTML = malzeme19 + " gr";
+          document.getElementById("malzeme20Miktari").innerHTML = malzeme20 + " gr";
+        } else {
+          unit.style.display = "none"; // Eğer ana malzeme boş veya sıfırsa, "gr" birimini gizle
+
+          // Hücreleri boş bırak
+          document.getElementById("malzeme1Miktari").innerHTML = "";
+          document.getElementById("malzeme2Miktari").innerHTML = "";
+          document.getElementById("malzeme3Miktari").innerHTML = "";
+          document.getElementById("malzeme4Miktari").innerHTML = "";
+          document.getElementById("malzeme5Miktari").innerHTML = "";
+          document.getElementById("malzeme6Miktari").innerHTML = "";
+          document.getElementById("malzeme7Miktari").innerHTML = "";
+          document.getElementById("malzeme8Miktari").innerHTML = "";
+          document.getElementById("malzeme9Miktari").innerHTML = "";
+          document.getElementById("malzeme10Miktari").innerHTML = "";
+          document.getElementById("malzeme11Miktari").innerHTML = "";
+          document.getElementById("malzeme12Miktari").innerHTML = "";
+          document.getElementById("malzeme13Miktari").innerHTML = "";
+          document.getElementById("malzeme14Miktari").innerHTML = "";
+          document.getElementById("malzeme15Miktari").innerHTML = "";
+          document.getElementById("malzeme16Miktari").innerHTML = "";
+          document.getElementById("malzeme17Miktari").innerHTML = "";
+          document.getElementById("malzeme18Miktari").innerHTML = "";
+          document.getElementById("malzeme19Miktari").innerHTML = "";
+          document.getElementById("malzeme20Miktari").innerHTML = "";
+        }
+      }
+    </script>
+    <script src="../script.js" defer></script>
+    <!-- JavaScript Bitimi -->
+  </body>
+</html>
