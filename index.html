@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarif Defteri</title>
+    <!-- Harici stil dosyası ve ikonlar için font bağlantıları -->
+    <link rel="stylesheet" href="style-light.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="icon" href="images/logo_icon.svg" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- MENÜ  BAŞLANGICI -->
+<!-- Mobil Menü Başlangııcı -->
+<!-- Menü Butonu (Hamburger Menü) -->
+<div class="menu-button" onclick="toggleSidebar()">
+  <i class="fas fa-bars"></i>
+</div>
+<!-- Sidebar Menü -->
+<div id="sidebar" class="sidebar">
+  <div class="close-btn" onclick="toggleSidebar()">&times;</div>
+  <nav>
+    <ul>
+      <!-- UNLU MAMÜLLER VE TATLILAR -->
+      <li>
+        <a href="#" class="menu-item" onclick="toggleSubmenu(event)">UNLU MAM. & TATLILAR</a>
+        <ul class="submenu">
+          <li><a href="pages/ekmek.html">Ekmek</a></li>
+          <li><a href="pages/lavas.html">Lavaş</a></li>
+          <li><a href="pages/simit.html">Simit</a></li>
+          <li><a href="pages/ramazan-pidesi.html">Ramazan Pidesi</a></li>
+          <li><a href="pages/kiymali-pide.html">Kıymalı Pide</a></li>
+          <li><a href="pages/lahmacun.html">Lahmacun</a></li>
+          <li><a href="pages/borek.html">Börek</a></li>
+          <li><a href="pages/pizza.html">Pizza</a></li>
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Kek</a>
+            <ul class="submenu">
+              <li><a href="pages/limonlu-kek.html">Limonlu Kek</a></li>
+              <li><a href="pages/brownie.html">Brownie</a></li>
+            </ul>
+          </li>
+          <li><a href="pages/kurabiye.html">Kurabiye</a></li>
+          <li><a href="pages/lokum.html">Lokum</a></li>
+          <li><a href="pages/asure.html">Aşure</a></li>
+          <li><a href="pages/su-muhallebisi.html">Su Muhallebisi</a></li>
+          <li><a href="pages/dondurma.html">Dondurma</a></li>
+        </ul>
+      </li>
+      <!-- YEMEKLER -->
+      <li>
+        <a href="#" class="menu-item" onclick="toggleSubmenu(event)">YEMEKLER</a>
+        <ul class="submenu">
+          <li><a href="pages/tavuk-izgara.html">Tavuk Izgara</a></li>
+          <li><a href="pages/kofte-izgara.html">Köfte Izgara</a></li>
+          <li><a href="pages/balik-izgara.html">Balık Izgara</a></li>
+          <li><a href="pages/adana-kebap.html">Adana Kebap</a></li>
+          <li><a href="pages/taze-fasulye.html">Taze Fasulye</a></li>
+          <li><a href="pages/zeytinyagli-yaprak-sarma.html">Zeytinyağlı Yaprak Sarma</a></li>
+          <li><a href="pages/zeytinyagli-biber-dolma.html">Zeytinyağlı Biber Dolma</a></li>
+          <li><a href="pages/mantarli-tavuk-sote.html">Mantarlı Tavuk Sote</a></li>
+          <li><a href="pages/ciger.html">Ciğer</a></li>
+          <li><a href="pages/sosisli.html">Sosisli</a></li>
+          <li><a href="pages/hamburger.html">Hamburger</a></li>
+          <li><a href="pages/kokorec.html">Kokoreç</a></li>
+          <li><a href="pages/kumpir.html">Kumpir</a></li>
+        </ul>
+      </li>
+      <!-- KAHVALTILIKLAR -->
+      <li>
+        <a href="#" class="menu-item" onclick="toggleSubmenu(event)">KAHVALTILIKLAR</a>
+        <ul class="submenu">
+          <li><a href="pages/menemen.html">Menemen</a></li>
+          <li><a href="pages/tost.html">Tost</a></li>
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Kahvaltı Tabağı</a>
+            <ul class="submenu">
+              <li><a href="pages/yumurta.html">Yumurta</a></li>
+              <li><a href="pages/beyaz-peynir.html">Beyaz Peynir</a></li>
+              <li><a href="pages/kasar-peyniri.html">Kaşar Peynir</a></li>
+              <li><a href="pages/zeytin.html">Zeytin</a></li>
+              <li><a href="pages/domates.html">Domates</a></li>
+              <li><a href="pages/salatalik.html">Salatalık</a></li>
+              <li><a href="pages/nane.html">Nane</a></li>
+              <li><a href="pages/biber.html">Biber</a></li>
+              <li><a href="pages/acuka.html">Acuka</a></li>
+              <li><a href="pages/salam.html">Salam</a></li>
+              <li><a href="pages/borek.html">Börek</a></li>
+              <li><a href="pages/kakaolu-findik-kremasi.html">Kakaolu Fındık Kreması</a></li>
+              <li><a href="pages/zahter.html">Zahter</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <!-- GARNİTÜRLER -->
+      <li>
+        <a href="#" class="menu-item" onclick="toggleSubmenu(event)">GARNİTÜRLER</a>
+        <ul class="submenu">
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Pilav</a>
+            <ul class="submenu">
+              <li><a href="pages/pirinc-pilavi.html">Pirinç Pilavı</a></li>
+              <li><a href="pages/bulgur-pilavi.html">Bulgur Pilavı</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Salata</a>
+            <ul class="submenu">
+              <li><a href="pages/mevsim-salatasi.html">Mevsim Salatası</a></li>
+              <li><a href="pages/coban-salatasi.html">Çoban Salatası</a></li>
+              <li><a href="pages/patates-salatasi.html">Patates Salatası</a></li>
+            </ul>
+          </li>
+          <li><a href="pages/cacik.html">Cacık</a></li>
+          <li><a href="pages/yogurt.html">Yoğurt</a></li>
+          <li>
+            <a href="#" class="menu-item" onclick="toggleSubmenu(event)">Turşu</a>
+            <ul class="submenu">
+              <li><a href="pages/kornison-tursusu.html">Kornişon Turşusu</a></li>
+              <li><a href="pages/biber-tursusu.html">Biber Turşusu</a></li>
+              <li><a href="pages/jalapeno-tursusu.html">Jalapeno Turşusu</a></li>
+            </ul>
+          </li>
+          <li><a href="pages/cig-kofte.html">Çiğ Köfte</a></li>
+        </ul>
+      </li>
+      <!-- SOSLAR -->
+      <li>
+        <a href="#" class="menu-item" onclick="toggleSubmenu(event)">SOSLAR</a>
+        <ul class="submenu">
+          <li><a href="pages/besamel-sos.html">Beşamel Sos</a></li>
+          <li><a href="pages/bolonez-sos.html">Bolonez Sos</a></li>
+          <li><a href="pages/domates-sosu.html">Domates Sosu</a></li>
+          <li><a href="pages/haydari.html">Haydari</a></li>
+          <li><a href="pages/mayonez.html">Mayonez</a></li>
+          <li><a href="pages/nar-eksisi.html">Nar Ekşisi</a></li>
+          <li><a href="pages/peynir-sosu.html">Peynir Sosu</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+<!-- Mobil Menü Bitimi -->
+
+
+<!-- Desktop Menü Başlangıcı -->
+<nav class="site-nav">
+  <div class="logo" onclick="window.location.href='../index.html';" style="cursor:pointer;">
+    <svg class="logo_icon" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000">
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier"> <path d="M10.3341 4.77929C9.91482 3.15159 8.66759 1.97843 7.21305 2.0003C5.44093 2.02694 4.03217 3.81732 4.06648 5.99923L4.03433 9.34056C4.02705 10.0967 4.02341 10.4748 3.88968 10.8109C3.75595 11.1471 3.46036 11.4685 2.86916 12.1112C2.28972 12.7412 2 13.2089 2 13.7454C2 14.563 2.67293 15.221 4.0188 16.5368L7.58758 20.0262C8.93345 21.3421 9.60638 22 10.4426 22C11.2788 22 11.9518 21.342 13.2976 20.0262L20.0783 13.3965C22.6406 10.8913 22.6406 6.82951 20.0783 4.32429C17.516 1.81908 13.3618 1.81908 10.7995 4.32429L10.3341 4.77929ZM10.3341 4.77929L9.37197 5.72001" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/> <path opacity="0.5" d="M13.2974 20.0263L4.01855 10.9541" stroke="#000000" stroke-width="1.5"/> </g>
+</svg>
+  <span class="logo_text1" >tarif<span class="logo_text2" >defteri</div>
+  <div class="food_name"></div>
+ 
+</nav>
+<div class="shadow-site-nav"></div>
+<!-- Desktop Menü Bitimi -->
+
+    <!-- MENÜ  BİTİMİ -->
+
+    <!-- İçerik Başlangıcı -->
+    <div class="video-container">
+      <video autoplay loop muted playsinline class="background-video">
+          <source src="images/video.mp4" type="video/mp4">
+          Tarayıcınız video oynatmayı desteklemiyor.
+      </video>
+  </div>
+  <div class="content-container">
+      <h1 class="slogan-text">Harika Tarifler Burada</h1>
+      <p class="slogan-subtext">Dilediğiniz Tafifi Seçin Kendi Mutfağınızın Şefi Olun...</p>
+      <div class="page index"><div class="search-container"><input type="text" id="searchInput" placeholder="Bugün ne pişirelim?" oninput="search()" /><div id="results" class="results-dropdown"></div></div></div>
+  </div>
+    <!-- Icerik Bitimi -->
+
+<!--   
+<div class="hazirlaniyor">
+<div class="chef"><img src="../images/chef.gif" alt="chef gif'i"></div>
+<div class="say_haz_asa">Sayfa Hazırlık Aşamasında</div>
+</div>
+-->
+
+  <!--
+    <div class="video-container">
+      <video autoplay loop muted playsinline class="background-video">
+          <source src="images/video.mp4" type="video/mp4">
+          Tarayıcınız video oynatmayı desteklemiyor.
+      </video>
+  </div>
+  <div class="content-container">
+      <img src="images/anasayfa.png" alt="Anasayfa Resmi" class="main-image">
+      <h1 class="slogan-text">Harika Tarifler Burada</h1>
+      <p class="slogan-subtext">Dilediğiniz Tafifi Seçin Kendi Mutfağınızın Şefi Olun...</p>
+  </div>
+  -->
+
+    <!-- JavaScript Başlangıcı -->
+    <script>
+      // Responsive Ayarlar
+
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const body = document.body;
+
+        // Menü açıldığında `no-scroll` sınıfını ekler, kapanınca kaldırır
+        if (sidebar.style.transform === "translateX(0%)") {
+          sidebar.style.transform = "translateX(-100%)";
+          body.classList.remove("no-scroll");
+        } else {
+          sidebar.style.transform = "translateX(0%)";
+          body.classList.add("no-scroll");
+        }
+      }
+
+      function toggleSubmenu(event) {
+        event.preventDefault(); // Varsayılan bağlantı davranışını engelle
+
+        const submenu = event.target.nextElementSibling; // Tıklanan menüdeki alt menüyü seç
+        const parentMenu = submenu.parentElement.parentElement; // Üst seviyedeki menüyü seç
+
+        // Aynı seviyedeki diğer açık menüleri kapat
+        parentMenu.querySelectorAll(".submenu.open").forEach((menu) => {
+          if (menu !== submenu) {
+            menu.classList.remove("open");
+          }
+        });
+
+        // Tıklanan menüyü aç veya kapat
+        submenu.classList.toggle("open");
+      }
+
+
+            // Arama Kutusu
+            const data = [
+        { title: "Ekmek", url: "pages/ekmek.html" },
+        { title: "Lavaş", url: "pages/lavas.html" },
+        { title: "Simit", url: "pages/simit.html" },
+        { title: "Ramazan Pidesi", url: "pages/ramazan-pidesi.html" },
+        { title: "Kıymalı Pide", url: "pages/kiymali-pide.html" },
+        { title: "Lahmacun", url: "pages/lahmacun.html" },
+        { title: "Börek", url: "pages/borek.html" },
+        { title: "Pizza", url: "pages/pizza.html" },
+        { title: "Limonlu Kek", url: "pages/limonlu-kek.html" },
+        { title: "Brownie", url: "pages/brownie.html" },
+        { title: "Kurabiye", url: "pages/kurabiye.html" },
+        { title: "Lokum", url: "pages/lokum.html" },
+        { title: "Aşure", url: "pages/asure.html" },
+        { title: "Su Muhallebisi", url: "pages/su-muhallebisi.html" },
+        { title: "Dondurma", url: "pages/dondurma.html" },
+        { title: "Tavuk Izgara", url: "pages/tavuk-izgara.html" },
+        { title: "Köfte Izgara", url: "pages/kofte-izgara.html" },
+        { title: "Balık Izgara", url: "pages/balik-izgara.html" },
+        { title: "Adana Kebap", url: "pages/adana-kebap.html" },
+        { title: "Taze Fasulye", url: "pages/taze-fasulye.html" },
+        { title: "Zeytinyağlı Yaprak Sarma", url: "pages/zeytinyagli-yaprak-sarma.html" },
+        { title: "Zeytinyağlı Biber Dolma", url: "pages/zeytinyagli-biber-dolma.html" },
+        { title: "Mantarlı Tavuk Sote", url: "pages/mantarli-tavuk-sote.html" },
+        { title: "Ciğer", url: "pages/ciger.html" },
+        { title: "Sosisli", url: "pages/sosisli.html" },
+        { title: "Hamburger", url: "pages/hamburger.html" },
+        { title: "Kokoreç", url: "pages/kokorec.html" },
+        { title: "Kumpir", url: "pages/kumpir.html" },
+        { title: "Menemen", url: "pages/menemen.html" },
+        { title: "Tost", url: "pages/tost.html" },
+        { title: "Yumurta", url: "pages/yumurta.html" },
+        { title: "Beyaz Peynir", url: "pages/beyaz-peynir.html" },
+        { title: "Kaşar Peyniri", url: "pages/kasar-peyniri.html" },
+        { title: "Zeytin", url: "pages/zeytin.html" },
+        { title: "Domates", url: "pages/domates.html" },
+        { title: "Salatalık", url: "pages/salatalik.html" },
+        { title: "Nane", url: "pages/nane.html" },
+        { title: "Biber", url: "pages/biber.html" },
+        { title: "Acuka", url: "pages/acuka.html" },
+        { title: "Salam", url: "pages/salam.html" },
+        { title: "Börek", url: "pages/borek.html" },
+        { title: "Kakaolu Fındık Kreması", url: "pages/kakaolu-findik-kremasi.html" },
+        { title: "Zahter", url: "pages/zahter.html" },
+        { title: "Pirinç Pilavı", url: "pages/pirinc-pilavi.html" },
+        { title: "Bulgur Pilavı", url: "pages/bulgur-pilavi.html" },
+        { title: "Mevsim Salatası", url: "pages/mevsim-salatasi.html" },
+        { title: "Çoban Salatası", url: "pages/coban-salatasi.html" },
+        { title: "Patates Salatası", url: "pages/patates-salatasi.html" },
+        { title: "Cacık", url: "pages/cacik.html" },
+        { title: "Kornişon Turşusu", url: "pages/kornison-tursusu.html" },
+        { title: "Biber Turşusu", url: "pages/biber-tursusu.html" },
+        { title: "Jalapeno Turşusu", url: "pages/jalapeno-tursusu.html" },
+        { title: "Çiğ Köfte", url: "pages/cig-kofte.html" },
+        { title: "Beşamel Sos", url: "pages/besamel-sos.html" },
+        { title: "Bolonez Sos", url: "pages/bolonez-sos.html" },
+        { title: "Domates Sosu", url: "pages/domates-sosu.html" },
+        { title: "Haydari", url: "pages/haydari.html" },
+        { title: "Mayonez", url: "pages/mayonez.html" },
+        { title: "Nar Ekşisi", url: "pages/nar-eksisi.html" },
+        { title: "Peynir Sosu", url: "pages/peynir-sosu.html" },
+        { title: "Yoğurt", url: "pages/yogurt.html" },
+
+      ];
+
+      function search() {
+        const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+        const resultsContainer = document.getElementById("results");
+
+        // Sonuçlar alanını temizleyin
+        resultsContainer.innerHTML = "";
+
+        // Arama terimine göre filtreleme
+        const results = data.filter((item) => item.title.toLowerCase().includes(searchTerm));
+
+        // Sonuçları göster
+        if (results.length > 0 && searchTerm !== "") {
+          resultsContainer.style.display = "block"; // Sonuçlar kutusunu göster
+          results.forEach((item) => {
+            const resultItem = document.createElement("p");
+
+            // Link oluştur
+            const link = document.createElement("a");
+            link.href = item.url;
+            link.textContent = item.title;
+            // link.target = "_blank"; // Yeni sekmede açma özelliği kaldırıldı
+
+            resultItem.appendChild(link);
+            resultsContainer.appendChild(resultItem);
+          });
+        } else {
+          resultsContainer.style.display = "none"; // Sonuçlar kutusunu gizle
+        }
+      }
+
+      // Arama kutusundan çıkıldığında sonuçları gizle
+      document.getElementById("searchInput").addEventListener("blur", function () {
+        setTimeout(() => {
+          document.getElementById("results").style.display = "none";
+        }, 200);
+      });
+
+      // Arama kutusuna yeniden odaklanıldığında, eğer sonuç varsa sonuçları göster
+      document.getElementById("searchInput").addEventListener("focus", function () {
+        const resultsContainer = document.getElementById("results");
+        if (resultsContainer.innerHTML.trim() !== "") {
+          resultsContainer.style.display = "block";
+        }
+      });
+
+    </script>
+    <!-- JavaScript Bitimi -->
+  </body>
+</html>
