@@ -1172,7 +1172,7 @@ input[type="number"]:placeholder-shown {
 
   .logo {
     margin: 0 auto;/* Merkezle */
-    margin-left: 20px;
+    margin-left: 10px;
     padding-top: 0px;  
     padding-right: 0px;
   }
@@ -1198,7 +1198,7 @@ input[type="number"]:placeholder-shown {
   .search-container {
     position: fixed;
     right: 60px;
-    width: 36%;
+    width: 30%;
   }
   #searchInput {
  
