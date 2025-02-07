@@ -311,9 +311,10 @@ html {
 }
 
 .logo_icon path {
-  stroke: rgb(166, 200, 124); /* Çevre çizgisi rengi */
-
+  stroke: rgb(137, 161, 107); /* Çevre çizgisi rengi */
   stroke-width: 1.5px;
+  fill: #acc58b;
+  
 }
 
 .logo_text1 {
@@ -323,15 +324,12 @@ html {
   background: none;
   text-decoration: none;
   font-family: "Roboto-Bold";
+  text-shadow: 1.5px 1.5px 2.5px rgba(17, 22, 0, 0.7);
 }
 
 .logo_text2 {
   color: #bbce7b;
-  background: linear-gradient(to right, #deffaf 0%, #88c47c 100%);
-  background-clip: border-box;
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
   border: none;
 
   text-decoration: none;
@@ -937,7 +935,7 @@ input[type="number"]:placeholder-shown {
 .banner {
   position: relative;
   width: 100%;
-  height: 80vh; /* Yükseklik ekranın %99'u */
+  height: 100vh; /* Yükseklik ekranın %99'u */
   overflow: hidden;
 }
 
@@ -1013,6 +1011,7 @@ input[type="number"]:placeholder-shown {
   font-weight: bold;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  
 }
 .slogan-subtext {
   font-size: 1.2rem;
@@ -1021,11 +1020,13 @@ input[type="number"]:placeholder-shown {
 }
 @media (max-width: 768px) {
   .slogan-text {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    width: 60%;
   }
 
   .slogan-subtext {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
+    width: 60%;
   }
 }
 /* Anasayfa Bitimi */
@@ -1416,14 +1417,15 @@ footer .bottom_content section {
   }
 
   .logo_icon {
-    height: 22px;
+    height: 25px;
   }
 
   .logo_text1 {
-    font-size: 21px;
+    font-size: 25px;
   }
-  .index .search-container {
-    padding-top: 400px;
+  .index-search-container {
+    padding-top: 270px;
+    width: 40%;
   }
   .index #searchInput {
     font-size: 15px;
