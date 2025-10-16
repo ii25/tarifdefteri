@@ -1,0 +1,1429 @@
+/* Fontları Başlangıcı*/
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobotoCondensed-Regular";
+  src: url("fonts/RobotoCondensed-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Foco";
+  src: url("fonts/Foco.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Fontlar Bitimi*/
+
+/* Animasyonlar Başlangıcı*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Üstten gelmesi için pozisyon */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Hedef pozisyon */
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9); /* Küçük boyutta başla */
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1); /* Orijinal boyutuna büyüyerek gelsin */
+  }
+}
+
+@keyframes bounceZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7); /* Küçük boyutta başla */
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05); /* Orijinal boyuttan biraz büyük */
+  }
+
+  70% {
+    transform: scale(0.98); /* Hafif küçülme */
+  }
+
+  100% {
+    opacity: 1; /* Tam görünür durumda kalmasını sağla */
+    transform: scale(1); /* Normal boyuta gelir */
+  }
+}
+
+@keyframes pulseAnimation {
+  0% {
+    opacity: 1; /* Tam görünür */
+  }
+
+  50% {
+    opacity: 0.2; /* Ortada hafif şeffaf */
+  }
+
+  100% {
+    opacity: 1; /* Tekrar tam görünür */
+  }
+}
+/* Animasyonlar Bitimi*/
+
+html {
+  background-image: radial-gradient(ellipse farthest-corner at center top, #212327 0%, #1D1F23 100%);
+  
+}
+
+/* Topbar Başlangıcı */
+
+
+.site-nav {
+  background-color: rgba(46, 46, 53, 0.39);
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.09);
+  padding: 0 0px;
+  border-bottom: 1px solid #ffffff0a;
+  height: 55px;
+  display: flex;
+  justify-content: space-between; /* Logo, menü ve arama çubuğu arasında boşluk */
+  align-items: center; /* Dikey merkezleme */
+  padding: 0 50px; /* Sağ ve sol kenarlardan boşluk */
+}
+
+.index-site-nav {
+  background-color: rgba(48, 47, 57, 0.19);
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 999;
+  padding: 0 0px;
+  border-bottom: 1px solid #ffffff26;
+  height: 55px;
+  display: flex;
+  align-items: center; /* Dikey merkezleme */
+  padding: 0 50px; /* Sağ ve sol kenarlardan boşluk */
+}
+
+/* Logo Başlagıcı */
+.index-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 0px;
+  margin-left: 80px;
+  border: none;
+  background: none;
+  float: left;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 0px;
+  margin-left: 80px;
+  border: none;
+  background: none;
+  float: left;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.logo_icon {
+  background: none;
+  height: 30px;
+  width: 30px;
+  text-decoration: none;
+}
+
+.logo_icon path {
+  stroke:  #ff9b4a; /* Çevre çizgisi rengi */
+  stroke-width: 1.5px;
+}
+
+.logo_text1 {
+  font-size: 24px;
+  color: #ffffff;
+  border: none;
+  background: none;
+  text-decoration: none;
+  font-family: "Roboto-Bold";
+  text-shadow: 1.5px 1.5px 2.5px rgba(17, 22, 0, 0.7);
+}
+
+.logo_text2 {
+  color: #ffd78d;
+  border: none;
+  text-decoration: none;
+}
+/* Logo Bitimi */
+
+/* Arama Başlangıcı */
+.index-search-container {
+  position: fixed;
+  display: flex; /* İçerik hizalaması için */
+  align-items: center; /* Dikey hizalama */
+  flex-direction: column;
+  padding-top: 220px;
+  width: 10%;
+  /*flex-shrink: 0; /* Arama çubuğunun küçülmesini engeller */
+}
+.index-search-container #searchInput {
+  font-family: "RobotoCondensed-Regular", "Helvetica Neue", Arial, sans-serif;
+  width: 100%;
+  min-width: 170px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #53535f;
+  border-radius: 20px;
+  outline: none;
+  height: 35px;
+  text-align: center;
+  color: #ffffff;
+  z-index: 9999;
+}
+
+.index .results-dropdown {
+  font-family: "RobotoCondensed-Regular", "Helvetica Neue", Arial, sans-serif;
+  position: absolute;
+  top: 100%; /* Arama çubuğunun hemen altında */
+  /* left: 0;*/
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;/* Başlangıçta gizli */
+}
+
+.search-container {
+  position: relative;
+  right: 100px;
+  transform: translateY(-6%);
+  display: flex;
+  align-items: center;
+  width: 225px;
+  flex-shrink: 0;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #53535fbb;
+  border-radius: 25px;
+  outline: none;
+  height: 35px;
+  background-color: #2a2a30ba;
+  color: #afafaf;
+  z-index: 9999;
+}
+
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+.mainLoginInput {
+  height: 40px;
+  padding: 0px;
+  font-size: 30px;
+  margin: 5px 0;
+}
+
+.mainLoginInput::-webkit-input-placeholder {
+  font-family: FontAwesome;
+  font-weight: normal;
+  overflow: visible;
+  vertical-align: top;
+  display: inline-block !important;
+  padding-left: 5px;
+  padding-top: 2px;
+  color: hsl(0, 0%, 41%);
+}
+
+.mainLoginInput::-moz-placeholder {
+  font-family: FontAwesome;
+  font-weight: normal;
+  overflow: visible;
+  vertical-align: top;
+  display: inline-block !important;
+  padding-left: 5px;
+  padding-top: 2px;
+  color: hsl(0, 0%, 41%);
+}
+
+.mainLoginInput:-ms-input-placeholder {
+  font-family: FontAwesome;
+  font-weight: normal;
+  overflow: visible;
+  vertical-align: top;
+  display: inline-block !important;
+  padding-left: 5px;
+  padding-top: 2px;
+  color: hsl(0, 0%, 53%);
+}
+
+.results-dropdown {
+  font-family: "RobotoCondensed-Regular", "Helvetica Neue", Arial, sans-serif;
+  position: absolute;
+  top: 100%; /* Arama çubuğunun hemen altında */
+  /* left: 0;*/
+  width: 100%;
+  background-color: #2B2B32;
+  border: 1px solid #35353d;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none; /* Başlangıçta gizli */
+}
+
+.results-dropdown p {
+  margin: 0;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.results-dropdown p a {
+  color: #83a1c0;
+  text-decoration: none;
+  display: block;/* Tıklanabilir alanı tüm bloğa yayar */
+  padding: 5px;/* Metin etrafında boşluk bırakır */
+}
+
+.results-dropdown p:hover {
+  background-color: #33333a;
+}
+/* Arama Bitimi */
+
+/* Tema Butonu Başlangıcı */
+.theme-toggle {
+  position: fixed;
+  top: 12px;
+  right: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 1000;
+  padding-bottom: 4px;
+}
+
+.theme-toggle i {
+  font-size: 24px;
+  color: white;
+}
+
+.theme-toggle:hover i {
+  opacity: 0.8;
+}
+
+.icon {
+  display: none; /* Varsayılan olarak gizli */
+  width: 25px;
+  height: 25px;
+  transition: opacity 0.3s ease;
+}
+
+.sun {
+  display: inline-block; /* Varsayılan olarak görünür */
+}
+
+[data-theme="dark"] .sun {
+  display: none; /* Dark temada güneşi gizle */
+}
+
+[data-theme="dark"] .moon {
+  display: inline-block; /* Dark temada ayı göster */
+}
+
+[data-theme="light"] .moon {
+  display: none; /* Light temada ayı gizle */
+}
+/* Tema Butonu Bitimi */
+/* Topbar Bitimi */
+
+/* İçerik Başlangıcı */
+/* Yiyecek İsmi Başlangıcı */
+.recipe-title-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.recipe-title-container {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.line-left {
+  height: 1px;
+  background-image: linear-gradient(0.25turn,rgba(70, 70, 70, 0),rgb(167, 167, 167));
+  flex: 1;
+}
+.line-right {
+  height: 1px;
+  background-image: linear-gradient(0.25turn,rgb(167, 167, 167),rgba(70, 70, 70, 0));
+  flex: 1;
+}
+.recipe-title {
+  font-family: "Roboto";
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+  font-size: 25px;
+  opacity: 0; /* İlk başta gizli */
+  animation: slideInFromTop 1s ease-out forwards; /* 1 saniyelik animasyon */
+}
+
+.recipe-image {
+  z-index: 9;
+  opacity: 0;
+  transform-origin: center;/* Animasyonun merkezden başlamasını sağlar */
+  animation: bounceZoomIn 0.9s ease-out forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 65px;
+  margin-bottom: 8px;
+}
+
+.shadow {
+  top: 127px;
+  position: fixed;
+  width: 60%;
+  height: 34px;
+  z-index: 99;
+  border-image: radial-gradient(0.25turn,rgba(34, 255, 60, 0.563),rgba(254, 0, 0, 0.523),rgba(233, 225, 3, 0.397));
+  border-image-slice: 1;
+  background-image: radial-gradient(farthest-side at 50% 0%,rgba(0, 0, 0, 0.084) 0%,rgba(134, 54, 54, 0) 100%);
+}
+/* Yiyecek İsmi Bitimi */
+
+/* Gövde Başlangıcı */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  border-top: 1px solid #32343C;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+
+}
+
+.card {
+  height: 680px;
+  margin: 0.2rem;
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  padding-bottom: 10px;
+  background-color: #32343C;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card_header_info {
+  text-align: center;
+  font-size: 14px;
+  color: #a2a2a2;
+  background-color: #32343C;
+  border-radius: 2px;
+  padding-top: 13px;
+  padding-bottom: 5px;
+  font-family: roboto;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card_header {
+  text-align: center;
+  padding-bottom: 0px;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(0.25turn, rgba(70, 70, 70, 0), rgba(173, 173, 173, 0.253), rgba(105, 105, 105, 0));
+  border-image-slice: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_header_icon {
+  vertical-align: middle;
+  margin-right: 148px;
+  align-items: center;
+  padding: 0; /* reset */
+  height: 40px;
+  fill:  #93ae7e;;
+  position: absolute;
+  margin-top: -120px;
+}
+
+.card_header_text {
+  font-family: "Roboto";
+  font-size: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #a0a0a0;
+  align-items: center;
+  padding: 0; /* reset */
+  position: absolute;
+  margin-top: -120px;
+  padding-left: 50px;
+}
+
+.table_container {
+  display: block;
+  max-height: 90%;
+  padding: 0;
+  margin: 0;
+  background: #32343C;
+  overflow-y: auto;
+  scroll-behavior: auto;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -webkit-scrollbar {
+    display: none;
+  }
+}
+/* Tablo Başlangıcı */
+
+/* Tüm tablolar için ortak ayarlar */
+table {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  width: 100%; /* Tablonun genişliğini div'e sığacak şekilde ayarlayın */
+  max-height: 100%; /* Tablonun div'den taşmasını engellemek için maksimum yüksekliği belirleyin */
+  border-collapse: collapse; /* Sütun ve satırların birleşik görünmesi için */
+  table-layout: fixed;
+  word-wrap: break-word; /* Uzun kelimeleri satır kaydır */
+  hyphens: auto;
+  white-space: normal; /* Normal metin sarma */
+   
+}
+
+
+tr {
+
+  text-align: left;
+  padding: 10px;
+  padding-left: 20px;
+ 
+}
+tr:hover {
+
+
+}
+
+td {
+
+  text-align: left;
+  padding: 17px;
+  padding-left: 20px;
+ 
+ 
+}
+
+.malzeme-tablosu td:nth-child(1) {
+  width: calc(100% - 120px);
+  /* İkinci sütun sabit 120px, birinci sütun geri kalan alan */
+  min-width: calc(100% - 120px);
+  max-width: calc(100% - 120px);
+  
+}
+
+
+
+.malzeme-tablosu td:nth-child(2) {
+  width: 129px;/* Sabit genişlik */
+  font-size: 20px;
+  font-weight: normal;
+  color: #666666;
+  background-color: #32343C;
+  text-align: right;
+}
+
+
+
+
+
+
+/* Tablo satırları için hover efekti */
+table.malzeme-tablosu tr:hover td,
+table.tarif-tablosu tr:hover td {
+  background-color: #373841;
+  
+ 
+  
+  
+ 
+  
+}
+
+/* Hücre içi stil ayarları */
+.cell-header {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: rgb(221, 221, 221);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.normal-text {
+  font-size: 16px;
+  font-weight: normal;
+  color: #b6b6b6;
+}
+/* Input alanı Başlangıcı*/
+/* Input alanı ve "gr" yazısını hizalamak için kapsayıcı */
+.input-container {
+  display: flex;
+  align-items: center;
+  /* input ve span'ı dikey olarak ortalar */
+  color: #008231;
+  font-size: 21px;
+}
+
+input[type="number"] {
+  width: 100%; /* Genişliği hücrenin tamamına yay */
+  height: 100%; /* Yüksekliği de hücrenin tamamına yay */
+  margin: 0; /* Dış boşlukları kaldır */
+  padding-right: 5px; /* Sağ tarafa yer açmak için padding ekleyin */
+  box-sizing: border-box; /* Kenarlık ve padding dahil olmak üzere genişliği yönet */
+  border: 1px solid rgba(255, 255, 255, 0);
+  outline: none; /* Odak çizgisi yok */
+  color: #008231;
+  background-color: rgba(253, 253, 253, 0);
+  font-size: 22px; /* Girilen rakamların yazı boyutu */
+  text-align: right; /* Rakamları sağdan başlat */
+  padding-top: 19px;
+  padding-bottom: 19px;
+  -moz-appearance: textfield;/* Firefox'ta da okları kaldırmak için */
+  animation: none; /* Girilen değerin animasyonu olmaması için */
+}
+
+/* Yanındaki "gr" yazısı */
+#unit {
+  font-size: 19px;
+  color: #008231;
+  padding-right: 10px;
+}
+
+/* Placeholder (Miktar girin) yazısı için stil */
+input[type="number"]::placeholder {
+  font-size: 17px; /* Placeholder yazısının boyutu */
+  color: #349e5d; /* Placeholder yazısı rengi */
+  text-align: center; /* Placeholder solda kalacak */
+}
+
+/* Sayı girişi (number input) ok işaretlerini kaldır */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Input alanı focus durumundayken kenarlık rengini değiştirmek */
+input[type="number"]:focus {
+  outline: none; /* Varsayılan mavi kenarlığı kaldır */
+}
+
+input[type="number"]:hover {
+  border: 1px solid #32343C;
+  background-color: #32343c3d;
+  animation: none !important; /* Girilen değerin animasyonu olmaması için */
+}
+
+/* Sadece placeholder'a animasyon uygulamak için */
+input[type="number"]:placeholder-shown {
+  animation: pulseAnimation 2s ease-in-out infinite;
+}
+/* Input alanı Bitimi*/
+
+/*Dropdown satır Başlangıcı */
+
+.dropdown-row select {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid #dddddd00;
+  background-color: #32343c00;
+  margin-left: -5px;
+  outline: none;/* Seçim yapıldığında mavi çizgiyi kaldır */
+  -webkit-appearance: none;/* Chrome'da ok işaretini kaldır */
+  -moz-appearance: none;/* Firefox'ta ok işaretini kaldır */
+  appearance: none;/* Diğer tarayıcılarda ok işaretini kaldır */
+  cursor: pointer;/* İmleci pointer yap */
+  font-weight: bold;
+  text-transform: capitalize;
+  color: rgb(221, 221, 221);
+  display: block;
+  width: 50%;
+}
+
+.dropdown-row select:hover {
+  
+  color: rgb(221, 221, 221);
+  background-color: #373841;
+  
+}
+/*Dropdown satır Bitimi */
+
+/* Su yüzdesi metni ve input alanını yan yana hizalama */
+.input-container-inline {
+  display: inline-flex; /* Yan yana hizalama */
+  align-items: center; /* Dikey ortalama */
+  gap: 5px; /* Metin ve input arasında boşluk */
+}
+
+.input-container-inline input[type="number"] {
+  width: 40px;
+  padding: 0px;
+  font-size: 14px;
+}
+
+#suYuzdesi {
+  background-color: #fafafa;
+  /* Açık mavi arka plan */
+  border: 1px solid #d4d4d4;
+  /* Turkuaz kenarlık */
+  color: #afb7ac;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 8px;
+  font-size: 18px;
+  /* Yazı boyutu */
+  margin-bottom: 20px;
+}
+  .vurgulu {
+    background-color: rgb(255, 241, 189);
+  }
+
+/* HESAP ARACI BİTİMİ */
+/* Tablo Bitimi */
+/* İçerik Bitimi */
+
+/* Anasayfa Başlangıcı */
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Yükseklik ekranın %99'u */
+  overflow: hidden;
+}
+
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/bg.jpg") no-repeat center center;
+  background-size: cover; /* Görsel tüm ekranı kaplar */
+  z-index: 0;
+}
+
+.banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 110%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Videoyu tıklanabilir olmaktan çıkarır */
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+.banner-video video {
+  position: absolute;
+  width: 750px; /* Sabit genişlik */
+  height: auto; /* Sabit yükseklik */
+  max-width: 100%; /* Genişlik ekran boyutunu aşmaz */
+  max-height: 100%; /* Yükseklik ekran boyutunu aşmaz */
+  object-fit: contain; /* Video içeriğini kesmeden boyutlandırır */
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .banner-video video {
+    width: auto;
+  }
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+  color: #fff2d9;
+  position: absolute;
+  height: 70%;
+  width: 100%;
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slogan-text {
+  font-family: "Foco", "Helvetica Neue", Arial, sans-serif;
+  font-size: 3.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #5d48c2, #c63fc3);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.slogan-subtext {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #6a6a6af0   
+  
+}
+@media (max-width: 768px) {
+  .slogan-text {
+    font-size: 2.5rem;
+    width: 60%;
+  }
+
+  .slogan-subtext {
+    font-size: 1.1rem;
+    width: 60%;
+  }
+}
+/* Anasayfa Bitimi */
+/* Footer Başlangıcı */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  outline: none !important;
+  color: #fff;
+}
+
+.border-shape {
+  background: #373737 none repeat scroll 0 0;
+  color: #fff;
+  display: block;
+  height: 1px;
+  left: 0;
+  margin: 20px auto;
+  position: relative;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 80px;
+}
+
+/*FOOTER*/
+footer {
+  width: 100%;
+  background-color: #212121;
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.top_header {
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-inline: 10rem;
+}
+
+.top_header section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.top_header span {
+  padding: 0 1rem;
+}
+
+.top_header .fa {
+  color: #8d8d8d;
+  font-size: 35px;
+}
+
+.top_header .fa-brands {
+  color: #7ed184;
+  font-size: 38px;
+}
+
+.top_header .fa-regular {
+  color: #ddc582;
+  font-size: 33px;
+}
+
+.top_header .fa-solid {
+  color: #7ed2e3;
+  font-size: 33px;
+}
+
+footer .border-shape {
+  width: 50%;
+}
+
+footer .bottom_content section {
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: Center;
+}
+
+.bottom_content a {
+  margin: 0 20px;
+  color: rgba(102, 102, 102, 0.7);
+  transition: 0.5s;
+}
+
+.bottom_content a:hover {
+  color: rgb(119, 119, 119);
+}
+
+.bottom_content .fa-facebook:hover {
+  color: #78b3ff;
+}
+.bottom_content .fa-instagram:hover {
+  color: #c778ff;
+}
+.bottom_content .fa-youtube:hover {
+  color: #ff6868;
+}
+.bottom_content .fa-telegram:hover {
+  color: #75d1ff;
+}
+
+.copyright {
+  padding: 0.8em 0;
+  background-color: #1e1e1e;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+}
+
+@media (max-width: 820px) {
+  .top_header {
+    padding: 1rem;
+    display: block;
+  }
+
+  .top_header section {
+    margin: 40px 0;
+    align-items: left;
+    justify-content: left;
+  }
+  footer .bottom_content section {
+    padding: 1rem;
+    display: block;
+  }
+  footer .bottom_content section a {
+    padding: 1rem;
+    font-size: 12px;
+    margin: 0 5px;
+    display: inline-block;
+  }
+}
+
+/* Footer Bitimi */
+
+/* Responsive Menü Başlangıcı */
+
+/* Menü Butonu */
+.menu-button {
+  display: none;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  z-index: 1001;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #64212e00;
+  /* Buton arka plan rengi */
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+}
+
+/* Kapatma Butonu */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #fff86e;
+  /* Kapatma butonu hover rengi */
+}
+
+/* Sidebar Menü */
+.sidebar {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #353740f0;;
+  /* Ana menü arka plan rengi */
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  padding-top: 60px;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
+  /* Gölge efekti */
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Sidebar İçerik */
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin: 0;
+}
+
+.sidebar nav ul li a {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* Alt çizgi efekti */
+}
+
+/* Hover Efekti */
+.sidebar nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Hover için hafif beyaz arka plan */
+  padding-left: 22px;
+  /* Hover olunca sağa doğru kayma efekti */
+}
+
+/* Alt Menü (Dropdown) */
+.sidebar nav ul li ul.submenu {
+  padding-left: 15px;
+  /* Alt menüler biraz içeride */
+  border-left: 0px solid rgba(255, 255, 255, 0.2);
+  /* Alt menü için ince çizgi */
+}
+
+.sidebar nav ul li ul.submenu li a {
+  font-size: 16px;
+  /* Alt menüler daha küçük */
+  padding: 10px 20px;
+  /* İç boşluk ayarı */
+}
+
+/* Alt Menü Hover */
+.sidebar nav ul li ul.submenu li a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding-left: 21px;
+  /* Sağ kayma efekti */
+}
+
+/* Alt menüyü başlangıçta gizle */
+.submenu {
+  display: none;
+  max-height: 300px;
+  /* Gerekirse ayarlayabilirsiniz */
+  overflow-y: auto;
+}
+
+/* Açıldığında görünür yap */
+.submenu.open {
+  display: block;
+}
+
+.no-scroll {
+  overflow: hidden;
+  /* Sayfa kaydırmasını engeller */
+  height: 100vh;
+  /* Sayfanın tam yükseklikte kalmasını sağlar */
+}
+
+.menu-button {
+  display: block;
+}
+
+.sidebar {
+  display: block;
+}
+
+/* Responsive Menü Başlangıcı */
+
+/* Mobilde Göster-Gizle */
+@media (max-width: 768px) {
+  .recipe-title-wrapper {
+    width: 80%;
+    position: absolute;
+  }
+  .recipe-title-container {
+  }
+  .line-left {
+    background-image: linear-gradient(
+      0.25turn,
+      rgba(55, 55, 55, 0),
+      rgb(255, 255, 255)
+    );
+
+    margin-top: 85px;
+  }
+  .line-right {
+    background-image: linear-gradient(
+      0.25turn,
+      rgb(255, 255, 255),
+      rgba(55, 55, 55, 0)
+    );
+
+    margin-top: 85px;
+  }
+  .recipe-title {
+    font-family: "Roboto", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+      Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(76, 76, 76);
+    white-space: nowrap;
+    font-size: 25px;
+    opacity: 0; /* İlk başta gizli */
+    animation: slideInFromTop 1s ease-out forwards; /* 1 saniyelik animasyon */
+    margin-top: 85px;
+  }
+
+  .shadow-site-nav {
+    top: 50px;
+    position: fixed;
+    width: 100%;
+    height: 38px;
+    z-index: 9;
+    background-color: #a8a8b5ed;
+  }
+
+  .recipe-image {
+    margin-top: 100px;
+  }
+
+  .site-nav ul li {
+    visibility: hidden;
+    /* Menü öğelerini gizler, ancak arka planı korur */
+  }
+
+  .logo {
+    margin: 0 auto; /* Merkezle */
+    margin-left: 10px;
+    padding-top: 0px;
+    padding-right: 0px;
+  }
+
+  .logo_icon {
+    height: 25px;
+  }
+
+  .logo_text1 {
+    font-size: 25px;
+  }
+  .index-search-container {
+    padding-top: 270px;
+    width: 40%;
+    max-width: 170px;
+  }
+  .index #searchInput {
+    font-size: 15px;
+    
+  }
+
+  .search-container {
+    position: fixed;
+    right: 60px;
+    width: 30%;
+  }
+  #searchInput {
+    height: 30px;
+  }
+
+  .theme-toggle {
+    position: fixed;
+    top: 12px;
+    right: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .theme-toggle i {
+    font-size: 24px;
+    color: white;
+  }
+
+  .theme-toggle:hover i {
+    opacity: 0.8;
+  }
+}
+
+/* Masaüstü Göster-Gizle*/
+@media (min-width: 769px) {
+  .site-nav {
+    display: fixed;
+    /* Navbar masaüstünde görünür */
+  }
+
+  .menu-button {
+    display: block;
+    /* Menü butonu masaüstünde gizlenir */
+  }
+}
+
+/* Responsive Menü Bitimi */
+
+/* Responsive İçerik Başlangıcı */
+
+@media (max-width: 768px) {
+  .sidebar nav ul li ul.submenu {
+    max-height: 38vh;
+    /* Ekranın %70’i kadar yükseklik */
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-nav {
+    box-shadow: none;
+  }
+
+  .container {
+    flex-direction: column; /* Kartları dikey hizala */
+    align-items: center; /* Kartları ortala */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  .card {
+    width: 93%;
+    /* Kart genişliğini mobil için ayarla */
+    margin: 10px 0;
+    /* Mobilde dikey boşluk */
+    padding-bottom: 8px;
+  }
+  .card_header {
+    padding-bottom: 10px;
+  }
+
+  .card_header_icon {
+    height: 32px;
+  }
+
+  .card_header_text {
+    font-size: 22px;
+  }
+
+  table.malzeme-tablosu tr:hover td,
+  table.tarif-tablosu tr:hover td {
+    background-color: #ffffff;
+  }
+
+  .cell-header {
+    font-size: 17px;
+  }
+
+  .normal-text {
+    font-size: 15px;
+  }
+}
+
+/* Varsayılan yükseklik ayarları */
+.container,
+.card,
+.table_container {
+  height: 77vh;
+  /* Tarayıcı yüksekliğinin tamamını kaplasın */
+}
+
+/* Yükseklik 800px'den az ve genişlik 768px'den büyük olduğunda */
+@media (max-height: 800px) and (min-width: 769px) {
+  .container,
+  .card,
+  .table_container {
+    height: 70vh;
+    /* Tarayıcı yüksekliğinin %70’i */
+  }
+}
+
+/* Yükseklik 700px'den az ve genişlik 768px'den büyük olduğunda */
+@media (max-height: 700px) and (min-width: 769px) {
+  .container,
+  .card,
+  .table_container {
+    height: 65vh;
+    /* Tarayıcı yüksekliğinin %65’i */
+  }
+}
+
+/* Mobil cihazlarda bu sorguları etkisiz hale getirin */
+@media (max-width: 768px) {
+  .container,
+  .card,
+  .table_container {
+    height: auto;
+    /* Varsayılan yüksekliği uygula */
+  }
+}
+
+/* Küçük ekranlar için düzenleme */
+@media (max-width: 768px) {
+  .site-nav ul {
+    justify-content: space-around; /* Menü öğelerini geniş ekranlarda merkezde tutar */
+  }
+}
+
+/* Responsive İçerik Bitimi */
+
+#features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  padding: 50px 0 90px 0;
+  background-color: #f6f6f6;
+  h2 {
+    color: $accentcolor;
+    font-weight: 800;
+    font-size: 1.9em;
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    h3 {
+      font-weight: 600;
+    }
+    p {
+      font-weight: 400;
+      color: #999;
+      font-size: 0.9em;
+    }
+    .fa {
+      align-self: flex-start;
+      position: relative;
+      top: 20px;
+      padding: 11px;
+      margin: 0;
+      color: $accentcolor;
+      border: 1px solid $accentcolor;
+      border-radius: 100%;
+    }
+    & > span {
+      width: 27%;
+      margin: 0;
+      padding-bottom: 100px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
